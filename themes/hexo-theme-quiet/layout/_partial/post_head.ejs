@@ -1,5 +1,5 @@
 <div class="post-header-background <%- theme.is_article_img?'post-header-img':'post-header-color'  %>"
-    style="background: url('<%- theme.is_article_img ?  theme.default_cover : null %>')" 
+    style="background: url('<%- theme.is_article_img ?  theme.default_cover : null %>');background-repeat:no-repeat;background-position:top;" 
 >
     <div class="post-header-background-content">
         <ul class="post-header-tag">
@@ -32,7 +32,7 @@
                 <span class="post-header-info-author-text"> <a href="<%- page.aubot_link ? page.aubot_link : '../../about' %>"><%- page.aubot ? page.aubot : theme.author %></a></span>
                 <div class="post-header-info-author-categories">
                     <% page.categories.data.map((cat)=>{ %>
-                         <a href="../../<%- cat.path %>" target="_blank" ><%- cat.name %></a>
+                         <a href="/<%- cat.path %>" target="_blank" ><%- cat.name %></a>
                     <% }) %>
                 </div>
                 <p><%- date(page.date, "YYYY-MM-DD HH:mm:ss") %></p>

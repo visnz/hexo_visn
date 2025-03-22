@@ -72,9 +72,7 @@
 #article pre {
   font-size: 0.85em;
   line-height: 1.5em;
-  display: flex;
   max-width: 1000px;
-  position: relative;
 }
 #article pre:after {
   position: absolute;
@@ -91,8 +89,7 @@
 #article pre code {
   flex: 1;
   text-align: left;
-  width: fit-content;
-  padding: 40px 20px 20px 20px;
+  padding: 10px 10px 10px 10px;
   margin: 20px 0;
   white-space: pre;
   word-spacing: normal;
@@ -198,6 +195,9 @@
 #article table tr td:first-child {
   border-left: 1px solid rgba(153, 169, 191, 0.1);
 }
+#article table tr .gutter {
+  width: 1em;
+}
 #article thead {
   text-indent: 1em;
 }
@@ -220,6 +220,6 @@
 #article tbody td {
   color: #333;
   font-weight: 400;
-  padding: 0 1em;
+  padding: 0 0.5em;
   text-align: left;
 }

@@ -1,9 +1,9 @@
 
 <div class="footer">
 	<div class="Copyright">
-		©<%= new Date().getFullYear() %> By <%- theme.author %>. 主题：<a
-			style="text-decoration: none;display: contents; color: #898F9F;"
-			href="https://github.com/79e/hexo-theme-quiet">Quiet</a>
+		©<%= new Date().getFullYear() %> By <%- theme.author %> <br>备案信息：<a
+			style="text-decoration: none;display: contents; color: #90defd;"
+			href="http://beian.miit.gov.cn">ICP-123456</a>
 	</div>
 	<div class="contact">
 		<% theme.bottomIcon.forEach(item =>{%>
@@ -12,10 +12,6 @@
 		</a>
 		<% }) %>
 	</div>
+	</div>
 </div>
 <%- partial('_widget/gotop') %>
-<%- partial('_widget/analytics')  %>
-<%- partial('_widget/comment')  %>
-<script>
-	console.log('\n %c Hexo-Quiet 主题 %c https://github.com/79e/hexo-theme-quiet \n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;')
-</script>
