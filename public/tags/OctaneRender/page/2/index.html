@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+<title>标签:OctaneRender-.Backup</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/assets/blog/about/d.webp.jpg">
+
+<link rel="stylesheet" href="/css/index.css">
+
+
+<meta name="keywords" content="技术,美术,Blender,C4D,AE">
+<meta name="description" content="一些自己存在过的记录">
+
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/index.js"></script>
+
+
+<script src="/js/fancybox.umd.js"></script>
+
+
+<script src="/js/fancybox-images.js"></script>
+
+
+<script src="/js/gitalk.min.js"></script>
+
+<!-- 
+<script src="/js/hljs.min.js"></script>
+  -->
+<!-- <script>hljs.highlightAll();</script> -->
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		
+
+	<div class="header">
+		<div class="header-top" id="header-top">
+			<div class="h-left">
+				<a href="/">
+					<img src="/assets/blog/about/d.webp.jpg" alt="Quiet">
+				</a>
+			</div>
+			<div class="h-right">
+				<ul>
+					
+						
+								<li>
+									<a href="/">
+										封面
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/tags/累进式笔记">
+										精选
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/categories">
+										分栏
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+							<li class="select">
+								<a href="/tags">
+									标记
+								</a>
+								<span class="dot"></span>
+							</li>
+							
+									
+						
+								<li>
+									<a href="/archives">
+										时间线
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/links">
+										外链
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/about">
+										关于我
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+				</ul>
+			</div>
+			<div class="h-right-close">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+					<path fill="none" d="M0 0h24v24H0z" />
+					<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(68,68,68,1)" />
+				</svg>
+			</div>
+		</div>
+	</div>
+	<div class="sidebar">
+    <div class="topo">
+        <h2>可能是水桶吧</h2>
+    </div>
+    <ul>
+        
+        <li>
+            <a href="/">封面</a>
+        </li>
+        
+        <li>
+            <a href="/tags/累进式笔记">精选</a>
+        </li>
+        
+        <li>
+            <a href="/categories">分栏</a>
+        </li>
+        
+        <li>
+            <a href="/tags">标记</a>
+        </li>
+        
+        <li>
+            <a href="/archives">时间线</a>
+        </li>
+        
+        <li>
+            <a href="/links">外链</a>
+        </li>
+        
+        <li>
+            <a href="/about">关于我</a>
+        </li>
+        
+    </ul>
+    <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://visnz.zcool.com.cn/">
+            <img src="/assets/website/zcool-icon2.png" alt="Quiet主题">
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://www.xiaohongshu.com/user/profile/599e99f650c4b40fb927384f">
+            <img src="/assets/website/xhs-icon.png" alt="Quiet主题">
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://space.bilibili.com/20477830">
+            <img src="/assets/website/bilibili-icon.png" alt="Quiet主题">
+        </a>
+        
+        <a href="/assets/blog/about/QQ_QRCode.jpg">
+            <img src="/assets/website/QQ-icon.png" alt="Quiet主题">
+        </a>
+        
+    </div>
+</div>
+<div class='shelter'>
+</div>
+<style>
+    .shelter{
+        background-color: #333;
+        opacity:0.5;
+        cursor: pointer;
+        display: none; 
+        position: fixed;
+        left: 0;
+        top: 0; 
+        right: 0;
+        bottom: 0;
+        z-index: 1998;
+    }
+    .sidebar {
+        width: 66%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        bottom: 0;
+        background: #fff;
+        z-index: 1999;
+        text-align: center;
+        box-shadow: -6px 0 20px rgba(98, 94, 94, .815);
+    }
+
+    .topo {
+        width: 100%;
+        height: 200px;
+        background: url(/assets/blog/about/d.webp.jpg) no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        display: flex;
+        align-items: flex-end
+    }
+
+    .topo h2 {
+        color: #fff;
+        z-index: 1;
+        position: relative;
+        margin: 0 0 10px 10px;
+        font-size: 1.2em;
+        box-sizing: border-box
+    }
+
+    .topo:before {
+        content: '';
+        background-image: url(/image/pattern.png);
+        background-repeat: repeat;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1
+    }
+
+    .sidebar ul {
+        width: 100%;
+        margin-top: 50px
+    }
+
+    .sidebar ul li {
+        height: 50px;
+        list-style: none;
+        font-size: 1.2em;
+        text-align: right;
+        margin-right: 10px
+    }
+
+    .sidebar ul li a {
+        display: grid;
+        color: #5d606a;
+        text-overflow: ellipsis;
+        width: 100%;
+        text-decoration: none
+    }
+
+    .my_foot {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        position: absolute;
+        bottom: 0
+    }
+
+    .my_foot a {
+        text-decoration: none;
+        margin-right: 10px;
+        display: inline-block
+    }
+
+    .my_foot a img {
+        width: 30px;
+        height: 30px
+    }
+</style>
+
+<script>
+    $( function () {
+	$( '.h-right-close>svg' )
+		.click( function () {
+			$( '.sidebar' )
+				.animate( {
+					right: "0"
+				}, 500 );
+			$( '.shelter' )
+				.fadeIn( "slow" )
+		} );
+	$( '.shelter' )
+		.click( function ( e ) {
+			$( '.sidebar' )
+				.animate( {
+					right: "-100%"
+				}, 500 );
+			$( '.shelter' )
+				.fadeOut( "slow" )
+		} )
+} )
+
+</script>
+
+
+
+
+<div class="tag">
+    <div class="header-body-background">
+    <div class="header-body-background-content">
+        <span>
+            <img src="/assets/website/tag.png" alt="Quiet">
+        </span>
+
+        <h2>文章标签：OctaneRender</h2>
+    </div>
+</div>
+    <div class="tag-content" id="content">
+        <div class="tag-content-data">
+            <div class="grouping">
+    
+        <p>
+            2022
+        </p>
+        
+        <a href="/2022/CG/Render/OC_Notes/">
+            <span>Octane小问题持续记录</span>
+            <time>10-21</time>
+        </a>
+        
+        <a href="/2022/CG/Render/OC_Setup/">
+            <span>OC个人起始设置与资产处理</span>
+            <time>07-05</time>
+        </a>
+        
+        <a href="/2022/CG/Comp/AE_Diffi/">
+            <span>使用Diffuse(filter info)通道在后期校准颜色</span>
+            <time>05-16</time>
+        </a>
+        
+        <a href="/2022/CG/Render/OC_Crack/">
+            <span>关于OC崩溃、显存优化的相关记录</span>
+            <time>01-21</time>
+        </a>
+        
+        
+        <p>
+            2021
+        </p>
+        
+        <a href="/2021/CG/Aces/">
+            <span>ACES操作简记</span>
+            <time>06-12</time>
+        </a>
+        
+        <a href="/2021/CG/Comp/AE_OC_Multi/">
+            <span>OC多通道与AE后期简述</span>
+            <time>03-21</time>
+        </a>
+        
+        
+</div>
+        </div>
+    </div>
+</div>
+
+		
+<div class="footer">
+	<div class="Copyright">
+		©2025 By 可能是水桶吧 <br>备案信息：<a
+			style="text-decoration: none;display: contents; color: #90defd;"
+			target="_blank" rel="noopener" href="http://beian.miit.gov.cn">ICP-123456</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://visnz.zcool.com.cn/">
+			<img src="/assets/website/zcool-icon2.png" alt="Quiet主题">
+		</a>
+		
+		<a target="_blank" rel="noopener" href="https://www.xiaohongshu.com/user/profile/599e99f650c4b40fb927384f">
+			<img src="/assets/website/xhs-icon.png" alt="Quiet主题">
+		</a>
+		
+		<a target="_blank" rel="noopener" href="https://space.bilibili.com/20477830">
+			<img src="/assets/website/bilibili-icon.png" alt="Quiet主题">
+		</a>
+		
+		<a href="/assets/blog/about/QQ_QRCode.jpg">
+			<img src="/assets/website/QQ-icon.png" alt="Quiet主题">
+		</a>
+		
+	</div>
+	</div>
+</div>
+
+<script src="/js/gotop.js"></script>
+
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            transition: border .5s;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .goTop {
+            display: none;
+        }
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $( '#js-go_top' )
+	.gotoTop( {
+		offset: 500,
+		speed: 300,
+		animationShow: {
+			'transform': 'translate(0,0)',
+			'transition': 'transform .5s ease-in-out'
+		},
+		animationHide: {
+			'transform': 'translate(100px,0)',
+			'transition': 'transform .5s ease-in-out'
+		}
+	} );
+</script>
+	</body>
+</html>
+

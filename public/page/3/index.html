@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+<title>水桶的小屋-.Backup</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/assets/blog/about/d.webp.jpg">
+
+<link rel="stylesheet" href="/css/index.css">
+
+
+<meta name="keywords" content="技术,美术,Blender,C4D,AE">
+<meta name="description" content="一些自己存在过的记录">
+
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/index.js"></script>
+
+
+<script src="/js/fancybox.umd.js"></script>
+
+
+<script src="/js/fancybox-images.js"></script>
+
+
+<script src="/js/gitalk.min.js"></script>
+
+<!-- 
+<script src="/js/hljs.min.js"></script>
+  -->
+<!-- <script>hljs.highlightAll();</script> -->
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		
+	<div class="header">
+		<div class="header-top" id="header-top">
+			<div class="h-left">
+				<a href="/">
+					<img src="/assets/blog/about/d.webp.jpg" alt="Quiet">
+				</a>
+			</div>
+			<div class="h-right">
+				<ul>
+					
+						
+							<li class="select">
+								<a href="/">
+									封面
+								</a>
+								<span class="dot"></span>
+							</li>
+							
+									
+						
+								<li>
+									<a href="/tags/累进式笔记">
+										精选
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/categories">
+										分栏
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/tags">
+										标记
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/archives">
+										时间线
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/links">
+										外链
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/about">
+										关于我
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+				</ul>
+			</div>
+			<div class="h-right-close">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+					<path fill="none" d="M0 0h24v24H0z" />
+					<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(68,68,68,1)" />
+				</svg>
+			</div>
+		</div>
+	</div>
+	<div class="sidebar">
+    <div class="topo">
+        <h2>可能是水桶吧</h2>
+    </div>
+    <ul>
+        
+        <li>
+            <a href="/">封面</a>
+        </li>
+        
+        <li>
+            <a href="/tags/累进式笔记">精选</a>
+        </li>
+        
+        <li>
+            <a href="/categories">分栏</a>
+        </li>
+        
+        <li>
+            <a href="/tags">标记</a>
+        </li>
+        
+        <li>
+            <a href="/archives">时间线</a>
+        </li>
+        
+        <li>
+            <a href="/links">外链</a>
+        </li>
+        
+        <li>
+            <a href="/about">关于我</a>
+        </li>
+        
+    </ul>
+    <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://visnz.zcool.com.cn/">
+            <img src="/assets/website/zcool-icon2.png" alt="Quiet主题">
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://www.xiaohongshu.com/user/profile/599e99f650c4b40fb927384f">
+            <img src="/assets/website/xhs-icon.png" alt="Quiet主题">
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://space.bilibili.com/20477830">
+            <img src="/assets/website/bilibili-icon.png" alt="Quiet主题">
+        </a>
+        
+        <a href="/assets/blog/about/QQ_QRCode.jpg">
+            <img src="/assets/website/QQ-icon.png" alt="Quiet主题">
+        </a>
+        
+    </div>
+</div>
+<div class='shelter'>
+</div>
+<style>
+    .shelter{
+        background-color: #333;
+        opacity:0.5;
+        cursor: pointer;
+        display: none; 
+        position: fixed;
+        left: 0;
+        top: 0; 
+        right: 0;
+        bottom: 0;
+        z-index: 1998;
+    }
+    .sidebar {
+        width: 66%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        bottom: 0;
+        background: #fff;
+        z-index: 1999;
+        text-align: center;
+        box-shadow: -6px 0 20px rgba(98, 94, 94, .815);
+    }
+
+    .topo {
+        width: 100%;
+        height: 200px;
+        background: url(/assets/blog/about/d.webp.jpg) no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        display: flex;
+        align-items: flex-end
+    }
+
+    .topo h2 {
+        color: #fff;
+        z-index: 1;
+        position: relative;
+        margin: 0 0 10px 10px;
+        font-size: 1.2em;
+        box-sizing: border-box
+    }
+
+    .topo:before {
+        content: '';
+        background-image: url(/image/pattern.png);
+        background-repeat: repeat;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1
+    }
+
+    .sidebar ul {
+        width: 100%;
+        margin-top: 50px
+    }
+
+    .sidebar ul li {
+        height: 50px;
+        list-style: none;
+        font-size: 1.2em;
+        text-align: right;
+        margin-right: 10px
+    }
+
+    .sidebar ul li a {
+        display: grid;
+        color: #5d606a;
+        text-overflow: ellipsis;
+        width: 100%;
+        text-decoration: none
+    }
+
+    .my_foot {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        position: absolute;
+        bottom: 0
+    }
+
+    .my_foot a {
+        text-decoration: none;
+        margin-right: 10px;
+        display: inline-block
+    }
+
+    .my_foot a img {
+        width: 30px;
+        height: 30px
+    }
+</style>
+
+<script>
+    $( function () {
+	$( '.h-right-close>svg' )
+		.click( function () {
+			$( '.sidebar' )
+				.animate( {
+					right: "0"
+				}, 500 );
+			$( '.shelter' )
+				.fadeIn( "slow" )
+		} );
+	$( '.shelter' )
+		.click( function ( e ) {
+			$( '.sidebar' )
+				.animate( {
+					right: "-100%"
+				}, 500 );
+			$( '.shelter' )
+				.fadeOut( "slow" )
+		} )
+} )
+
+</script>
+
+<div class="home">
+	<div class="header-body-background">
+    <div class="header-body-background-content">
+        <span>
+            <img src="/assets/blog/about/d.webp.jpg" alt="Quiet">
+        </span>
+
+        <h2>时间以同样的方式流经每个人</h2>
+    </div>
+</div>
+	<div class="main">
+		
+			<div class="post-card" id="content">
+				
+					<div class="post-card-display">
+						<a href="/2023/books/%E3%80%8A%E9%9B%AA%E5%9B%BD%E3%80%8B/">
+							<h2 class="post-card-title">
+								《雪国》笔记摘抄
+							</h2>
+							
+								<img src="/assets/blog/books/《古都》.jpg" alt="Quiet">
+							
+						</a>
+						<div class="post-card-meat">
+							<div class="meat-info">
+								<div class="info-auth">
+										<a href="categories/读书笔记/">
+											读书笔记
+										</a>
+								</div>
+								<div class="info-data">
+									2023-05-06
+								</div>
+							</div>
+							<div class="meat-type"></div>
+						</div>
+					</div>
+				
+					<div class="post-card-display">
+						<a href="/2023/books/%E3%80%8A%E5%B7%A5%E4%BD%9C%E3%80%81%E6%B6%88%E8%B4%B9%E4%B8%BB%E4%B9%89%E5%92%8C%E6%96%B0%E7%A9%B7%E4%BA%BA%E3%80%8B/">
+							<h2 class="post-card-title">
+								《工作、消费主义和新穷人》笔记摘抄
+							</h2>
+							
+								<img src="/assets/blog/books/《工作、消费主义和新穷人》.jpg" alt="Quiet">
+							
+						</a>
+						<div class="post-card-meat">
+							<div class="meat-info">
+								<div class="info-auth">
+										<a href="categories/读书笔记/">
+											读书笔记
+										</a>
+								</div>
+								<div class="info-data">
+									2023-04-19
+								</div>
+							</div>
+							<div class="meat-type"></div>
+						</div>
+					</div>
+				
+					<div class="post-card-display">
+						<a href="/2023/CG/Render/OC_ScatterWiggle/">
+							<h2 class="post-card-title">
+								C4D/OC Scatter做简单摇曳草地
+							</h2>
+							
+								<img src="/assets/blog/CG/Render/OC_ScatterWiggle1.webp" alt="Quiet">
+							
+						</a>
+						<div class="post-card-meat">
+							<div class="meat-info">
+								<div class="info-auth">
+										<a href="categories/渲染器相关/">
+											渲染器相关
+										</a>
+								</div>
+								<div class="info-data">
+									2023-04-15
+								</div>
+							</div>
+							<div class="meat-type"></div>
+						</div>
+					</div>
+				
+					<div class="post-card-display">
+						<a href="/2023/books/%E3%80%8A%E6%83%B3%E8%B1%A1%E7%9A%84%E5%85%B1%E5%90%8C%E4%BD%93%E3%80%8B/">
+							<h2 class="post-card-title">
+								《想象的共同体》笔记摘抄
+							</h2>
+							
+								<img src="/assets/blog/books/《想象的共同体》.jpg" alt="Quiet">
+							
+						</a>
+						<div class="post-card-meat">
+							<div class="meat-info">
+								<div class="info-auth">
+										<a href="categories/读书笔记/">
+											读书笔记
+										</a>
+								</div>
+								<div class="info-data">
+									2023-03-06
+								</div>
+							</div>
+							<div class="meat-type"></div>
+						</div>
+					</div>
+				
+					<div class="post-card-display">
+						<a href="/2023/books/%E3%80%8A%E6%97%A7%E5%88%B6%E5%BA%A6%E4%B8%8E%E5%A4%A7%E9%9D%A9%E5%91%BD%E3%80%8B/">
+							<h2 class="post-card-title">
+								《旧制度与大革命》笔记摘抄
+							</h2>
+							
+								<img src="/assets/blog/books/《旧制度与大革命》.jpg" alt="Quiet">
+							
+						</a>
+						<div class="post-card-meat">
+							<div class="meat-info">
+								<div class="info-auth">
+										<a href="categories/读书笔记/">
+											读书笔记
+										</a>
+								</div>
+								<div class="info-data">
+									2023-02-06
+								</div>
+							</div>
+							<div class="meat-type"></div>
+						</div>
+					</div>
+				
+					<div class="post-card-display">
+						<a href="/2023/books/%E3%80%8A%E7%89%9B%E6%B4%A5%E9%80%9A%E8%AF%86%E8%AF%BB%E6%9C%AC%EF%BC%9A%E7%8E%B0%E4%BB%A3%E6%97%A5%E6%9C%AC%E3%80%8B/">
+							<h2 class="post-card-title">
+								《牛津通识读本：现代日本》笔记摘抄
+							</h2>
+							
+								<img src="/assets/blog/books/《牛津通识读本：现代日本》.jpg" alt="Quiet">
+							
+						</a>
+						<div class="post-card-meat">
+							<div class="meat-info">
+								<div class="info-auth">
+										<a href="categories/读书笔记/">
+											读书笔记
+										</a>
+								</div>
+								<div class="info-data">
+									2023-01-12
+								</div>
+							</div>
+							<div class="meat-type"></div>
+						</div>
+					</div>
+				
+					<div class="post-card-display">
+						<a href="/2023/books/%E3%80%8A%E5%85%AB%E4%B8%87%E5%9B%9B%E5%8D%83%E9%97%AE%E3%80%8B/">
+							<h2 class="post-card-title">
+								《八万四千问》笔记摘抄
+							</h2>
+							
+								<img src="/assets/blog/books/《八万四千问》.jpg" alt="Quiet">
+							
+						</a>
+						<div class="post-card-meat">
+							<div class="meat-info">
+								<div class="info-auth">
+										<a href="categories/读书笔记/">
+											读书笔记
+										</a>
+								</div>
+								<div class="info-data">
+									2023-01-11
+								</div>
+							</div>
+							<div class="meat-type"></div>
+						</div>
+					</div>
+				
+					<div class="post-card-display">
+						<a href="/2023/books/%E3%80%8A%E7%89%9B%E6%B4%A5%E9%80%9A%E8%AF%86%E8%AF%BB%E6%9C%AC%EF%BC%9A%E5%B0%BC%E9%87%87%E3%80%8B/">
+							<h2 class="post-card-title">
+								《牛津通识读本：尼采》笔记摘抄
+							</h2>
+							
+								<img src="/assets/blog/books/《牛津通识读本：尼采》.jpg" alt="Quiet">
+							
+						</a>
+						<div class="post-card-meat">
+							<div class="meat-info">
+								<div class="info-auth">
+										<a href="categories/读书笔记/">
+											读书笔记
+										</a>
+								</div>
+								<div class="info-data">
+									2023-01-05
+								</div>
+							</div>
+							<div class="meat-type"></div>
+						</div>
+					</div>
+				
+					<div class="post-card-display">
+						<a href="/2023/books/%E3%80%8A%E5%8F%A4%E9%83%BD%E3%80%8B/">
+							<h2 class="post-card-title">
+								《古都》笔记摘抄
+							</h2>
+							
+								<img src="/assets/blog/books/《古都》.jpg" alt="Quiet">
+							
+						</a>
+						<div class="post-card-meat">
+							<div class="meat-info">
+								<div class="info-auth">
+										<a href="categories/读书笔记/">
+											读书笔记
+										</a>
+								</div>
+								<div class="info-data">
+									2023-01-02
+								</div>
+							</div>
+							<div class="meat-type"></div>
+						</div>
+					</div>
+				
+					<div class="post-card-display">
+						<a href="/2022/CG/Render/OC_Scatter/">
+							<h2 class="post-card-title">
+								OC scatter场景分布（摄像机外剔除）
+							</h2>
+							
+								<img src="/assets/blog/CG/Render/OC_Scatter3.webp" alt="Quiet">
+							
+						</a>
+						<div class="post-card-meat">
+							<div class="meat-info">
+								<div class="info-auth">
+										<a href="categories/渲染器相关/">
+											渲染器相关
+										</a>
+								</div>
+								<div class="info-data">
+									2022-12-03
+								</div>
+							</div>
+							<div class="meat-type"></div>
+						</div>
+					</div>
+				
+					<div class="post-card-display">
+						<a href="/2022/CG/Render/OC_Notes/">
+							<h2 class="post-card-title">
+								Octane小问题持续记录
+							</h2>
+							
+								<img src="/assets/blog/CG/Render/OC_Notes1.webp" alt="Quiet">
+							
+						</a>
+						<div class="post-card-meat">
+							<div class="meat-info">
+								<div class="info-auth">
+										<a href="categories/渲染器相关/">
+											渲染器相关
+										</a>
+								</div>
+								<div class="info-data">
+									2022-10-21
+								</div>
+							</div>
+							<div class="meat-type"></div>
+						</div>
+					</div>
+				
+					<div class="post-card-display">
+						<a href="/2022/CG/Render/OC_Setup/">
+							<h2 class="post-card-title">
+								OC个人起始设置与资产处理
+							</h2>
+							
+								<img src="/assets/blog/CG/Render/OC_Setup2.webp" alt="Quiet">
+							
+						</a>
+						<div class="post-card-meat">
+							<div class="meat-info">
+								<div class="info-auth">
+										<a href="categories/渲染器相关/">
+											渲染器相关
+										</a>
+								</div>
+								<div class="info-data">
+									2022-07-05
+								</div>
+							</div>
+							<div class="meat-type"></div>
+						</div>
+					</div>
+				
+			</div>
+		
+		
+	
+	</div>
+	<div class="change-page">
+		
+			<div class="p-page">
+				<a href="/page/2/">
+					<div class="previous">
+						上一页
+					</div>
+				</a>
+			</div>
+			
+				
+					<div class="n-page">
+						<a href="/page/4/">
+							<div class="next">
+								下一页
+							</div>
+						</a>
+					</div>
+					
+	</div>
+	
+</div>
+		
+<div class="footer">
+	<div class="Copyright">
+		©2025 By 可能是水桶吧 <br>备案信息：<a
+			style="text-decoration: none;display: contents; color: #90defd;"
+			target="_blank" rel="noopener" href="http://beian.miit.gov.cn">ICP-123456</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://visnz.zcool.com.cn/">
+			<img src="/assets/website/zcool-icon2.png" alt="Quiet主题">
+		</a>
+		
+		<a target="_blank" rel="noopener" href="https://www.xiaohongshu.com/user/profile/599e99f650c4b40fb927384f">
+			<img src="/assets/website/xhs-icon.png" alt="Quiet主题">
+		</a>
+		
+		<a target="_blank" rel="noopener" href="https://space.bilibili.com/20477830">
+			<img src="/assets/website/bilibili-icon.png" alt="Quiet主题">
+		</a>
+		
+		<a href="/assets/blog/about/QQ_QRCode.jpg">
+			<img src="/assets/website/QQ-icon.png" alt="Quiet主题">
+		</a>
+		
+	</div>
+	</div>
+</div>
+
+<script src="/js/gotop.js"></script>
+
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            transition: border .5s;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .goTop {
+            display: none;
+        }
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $( '#js-go_top' )
+	.gotoTop( {
+		offset: 500,
+		speed: 300,
+		animationShow: {
+			'transform': 'translate(0,0)',
+			'transition': 'transform .5s ease-in-out'
+		},
+		animationHide: {
+			'transform': 'translate(100px,0)',
+			'transition': 'transform .5s ease-in-out'
+		}
+	} );
+</script>
+	</body>
+</html>
+

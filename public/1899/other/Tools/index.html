@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+<title>一些储备的工具库-.Backup</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/assets/blog/about/d.webp.jpg">
+
+<link rel="stylesheet" href="/css/index.css">
+
+
+
+<meta name="keywords" content="累进式笔记,">
+<meta name="description" content="">
+
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/index.js"></script>
+
+
+<script src="/js/fancybox.umd.js"></script>
+
+
+<script src="/js/fancybox-images.js"></script>
+
+
+<script src="/js/gitalk.min.js"></script>
+
+<!-- 
+<script src="/js/hljs.min.js"></script>
+  -->
+<!-- <script>hljs.highlightAll();</script> -->
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		
+	<div class="header">
+		<div class="header-top" id="header-top">
+			<div class="h-left">
+				<a href="/">
+					<img src="/assets/blog/about/d.webp.jpg" alt="Quiet">
+				</a>
+			</div>
+			<div class="h-right">
+				<ul>
+					
+						
+								<li>
+									<a href="/">
+										封面
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/tags/累进式笔记">
+										精选
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/categories">
+										分栏
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/tags">
+										标记
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/archives">
+										时间线
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/links">
+										外链
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/about">
+										关于我
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+				</ul>
+			</div>
+			<div class="h-right-close">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+					<path fill="none" d="M0 0h24v24H0z" />
+					<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(68,68,68,1)" />
+				</svg>
+			</div>
+		</div>
+	</div>
+	<div class="sidebar">
+    <div class="topo">
+        <h2>可能是水桶吧</h2>
+    </div>
+    <ul>
+        
+        <li>
+            <a href="/">封面</a>
+        </li>
+        
+        <li>
+            <a href="/tags/累进式笔记">精选</a>
+        </li>
+        
+        <li>
+            <a href="/categories">分栏</a>
+        </li>
+        
+        <li>
+            <a href="/tags">标记</a>
+        </li>
+        
+        <li>
+            <a href="/archives">时间线</a>
+        </li>
+        
+        <li>
+            <a href="/links">外链</a>
+        </li>
+        
+        <li>
+            <a href="/about">关于我</a>
+        </li>
+        
+    </ul>
+    <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://visnz.zcool.com.cn/">
+            <img src="/assets/website/zcool-icon2.png" alt="Quiet主题">
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://www.xiaohongshu.com/user/profile/599e99f650c4b40fb927384f">
+            <img src="/assets/website/xhs-icon.png" alt="Quiet主题">
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://space.bilibili.com/20477830">
+            <img src="/assets/website/bilibili-icon.png" alt="Quiet主题">
+        </a>
+        
+        <a href="/assets/blog/about/QQ_QRCode.jpg">
+            <img src="/assets/website/QQ-icon.png" alt="Quiet主题">
+        </a>
+        
+    </div>
+</div>
+<div class='shelter'>
+</div>
+<style>
+    .shelter{
+        background-color: #333;
+        opacity:0.5;
+        cursor: pointer;
+        display: none; 
+        position: fixed;
+        left: 0;
+        top: 0; 
+        right: 0;
+        bottom: 0;
+        z-index: 1998;
+    }
+    .sidebar {
+        width: 66%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        bottom: 0;
+        background: #fff;
+        z-index: 1999;
+        text-align: center;
+        box-shadow: -6px 0 20px rgba(98, 94, 94, .815);
+    }
+
+    .topo {
+        width: 100%;
+        height: 200px;
+        background: url(/assets/blog/about/d.webp.jpg) no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        display: flex;
+        align-items: flex-end
+    }
+
+    .topo h2 {
+        color: #fff;
+        z-index: 1;
+        position: relative;
+        margin: 0 0 10px 10px;
+        font-size: 1.2em;
+        box-sizing: border-box
+    }
+
+    .topo:before {
+        content: '';
+        background-image: url(/image/pattern.png);
+        background-repeat: repeat;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1
+    }
+
+    .sidebar ul {
+        width: 100%;
+        margin-top: 50px
+    }
+
+    .sidebar ul li {
+        height: 50px;
+        list-style: none;
+        font-size: 1.2em;
+        text-align: right;
+        margin-right: 10px
+    }
+
+    .sidebar ul li a {
+        display: grid;
+        color: #5d606a;
+        text-overflow: ellipsis;
+        width: 100%;
+        text-decoration: none
+    }
+
+    .my_foot {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        position: absolute;
+        bottom: 0
+    }
+
+    .my_foot a {
+        text-decoration: none;
+        margin-right: 10px;
+        display: inline-block
+    }
+
+    .my_foot a img {
+        width: 30px;
+        height: 30px
+    }
+</style>
+
+<script>
+    $( function () {
+	$( '.h-right-close>svg' )
+		.click( function () {
+			$( '.sidebar' )
+				.animate( {
+					right: "0"
+				}, 500 );
+			$( '.shelter' )
+				.fadeIn( "slow" )
+		} );
+	$( '.shelter' )
+		.click( function ( e ) {
+			$( '.sidebar' )
+				.animate( {
+					right: "-100%"
+				}, 500 );
+			$( '.shelter' )
+				.fadeOut( "slow" )
+		} )
+} )
+
+</script>
+
+<div class="post">
+    <div class="post-header-background post-header-img"
+    style="background: url('/assets/blog/about/d.webp.jpg');background-repeat:no-repeat;background-position:top;" 
+>
+    <div class="post-header-background-content">
+        <ul class="post-header-tag">
+            
+            
+            <li><a href="/tags/累进式笔记">累进式笔记</a></li>
+            
+            
+        </ul>
+        
+        <h1>一些储备的工具库</h1>
+        <div class="post-header-info">
+            <div class="post-header-info-author">
+                
+                    <svg t="1604839279282" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="2901" width="20" height="20">
+                        <path
+                            d="M513 956.3c-247.7 0-448-200.3-448-448S265.3 66.2 513 66.2s448 200.3 448 448-200.3 442.1-448 442.1z m0-830.9c-212.2 0-388.8 170.7-388.8 388.8C124.2 726.3 294.9 903 513 903c212.2 0 388.8-170.7 388.8-388.8S725.2 125.4 513 125.4z m0 430.2c-94.2 0-170.7-76.5-170.7-170.7S418.8 207.8 513 207.8s170.7 76.5 170.7 170.7S607.2 555.6 513 555.6z m0-289.1c-64.6 0-112 52.8-112 112s47.4 117.9 112 117.9 112-52.8 112-112-47.4-117.9-112-117.9z m0 689.8c-135.7 0-259-58.7-341.9-158.9l-11.8-17.8 11.8-17.8c76.5-117.9 206.2-188.5 347.8-188.5 135.7 0 265 64.6 341.9 182.6l11.8 17.8-11.8 17.8C778 897.1 648.7 956.3 513 956.3zM230.3 773.2C300.9 849.7 406.9 897 513 897c112 0 218.1-47.4 288.6-129.8-70.5-88.2-170.7-135.6-282.7-135.6s-218.1 53.3-288.6 141.6z"
+                            p-id="2902" fill="#ffffff"></path>
+                    </svg>
+                    
+                <span class="post-header-info-author-text"> <a href="/index.html">可能是水桶吧</a></span>
+                <div class="post-header-info-author-categories">
+                    
+                         <a href="/categories/工具与其他/" target="_blank" >工具与其他</a>
+                    
+                </div>
+                <p>1899-11-30 00:00:00</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="post-content" id="content">
+  
+  <div id="article" class="post-content-info">
+    
+
+    <!-- <div class="links-content-data" style="padding:12px;    justify-content: flex-start;">
+    <div class="links-content-data-item"><a target="_blank" rel="noopener" href="https://artlist.io/"><div class="card">
+        <div class="user-link-image">
+            <img src="/assets/blog/other/Toolbar/favicon.ico">
+        </div><div class="user-link-info">
+            <p style="margin:0">Artlist.io</p>
+            <span>各类数字媒体资产</span>
+    </div></div></a></div>
+    <div class="links-content-data-item"><a href=""><div class="card">
+        <div class="user-link-image">
+            <img src="/assets/website/bilibili-icon.png">
+        </div><div class="user-link-info">
+            <p style="margin:0">1234</p>
+            <span>123</span>
+    </div></div></a></div>
+    <div class="links-content-data-item"><a href=""><div class="card">
+        <div class="user-link-image">
+            <img src="/assets/website/bilibili-icon.png">
+        </div><div class="user-link-info">
+            <p style="margin:0">1234</p>
+            <span>123</span>
+    </div></div></a></div>
+    <div class="links-content-data-item"><a href=""><div class="card">
+        <div class="user-link-image">
+            <img src="/assets/website/bilibili-icon.png">
+        </div><div class="user-link-info">
+            <p style="margin:0">1234</p>
+            <span>123</span>
+    </div></div></a></div>
+</div> -->
+<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><p><a href="/assets/blog/other/Tools/%E6%9C%A8%E7%BA%B9%E7%A7%8D%E7%B1%BB%E7%B4%A2%E5%BC%95.pdf">木纹种类索引.pdf</a><br><a href="/assets/blog/other/Tools/%E5%99%AA%E6%B3%A2%E6%9F%A5%E8%AF%A2%E5%AD%97%E5%85%B8.pdf">噪波查询字典.pdf</a></p>
+<h1 id="1-数字媒体流程"><a href="#1-数字媒体流程" class="headerlink" title="1 数字媒体流程"></a>1 数字媒体流程</h1><p><a target="_blank" rel="noopener" href="https://artlist.io/" title="综合数字媒体资产网站Artlist">综合数字媒体资产网站Artlist</a><br><a target="_blank" rel="noopener" href="http://elements.envato.com/" title="elements.envato.com">elements.envato.com</a></p>
+<h2 id="1-1-配色工具"><a href="#1-1-配色工具" class="headerlink" title="1.1 配色工具"></a>1.1 配色工具</h2><p>灵感库里有配色案例<br><a target="_blank" rel="noopener" href="https://color.adobe.com/zh/create/color-wheel" title="Adobe官方配色工具">Adobe官方配色工具</a><br><a target="_blank" rel="noopener" href="https://tools.miku.ac/japan_colors/" title="日本传统色">日本传统色</a><br><a target="_blank" rel="noopener" href="https://tools.miku.ac/china_colors/" title="中国传统色">中国传统色</a><br><a target="_blank" rel="noopener" href="https://meshgradient.com/" title="渐变色彩背景图配色">渐变色彩背景图配色</a></p>
+<h2 id="1-2-字体"><a href="#1-2-字体" class="headerlink" title="1.2 字体"></a>1.2 字体</h2><p><a target="_blank" rel="noopener" href="https://www.fonts.net.cn/commercial-free/fonts-zh/tag-heiti-3.html" title="字体天下">字体天下</a><br><a target="_blank" rel="noopener" href="https://www.maoken.com/all-fonts" title="猫啃网">猫啃网</a><br><a target="_blank" rel="noopener" href="http://100font.com/" title="100font.com">100font.com</a><br><a target="_blank" rel="noopener" href="https://fonts.google.com/" title="谷歌字体">谷歌字体</a></p>
+<h2 id="1-3-音乐素材网站"><a href="#1-3-音乐素材网站" class="headerlink" title="1.3 音乐素材网站"></a>1.3 音乐素材网站</h2><p>PremiumBeat（gmail&#x2F;183）<br>Pond5<br><a target="_blank" rel="noopener" href="https://studio.youtube.com/channel/UCXLkx0E7ZmNuZes1mrxpdmQ/music" title="YouTube Studio">YouTube Studio</a><br><a target="_blank" rel="noopener" href="https://www.audiolibrary.com.co/" title="Audio Library">Audio Library</a></p>
+<h2 id="1-4-视频素材网站"><a href="#1-4-视频素材网站" class="headerlink" title="1.4 视频素材网站"></a>1.4 视频素材网站</h2><p>vidlery<br>videov.net<br>pexels（常用）<br>pixabay librestock<br>istock（有用过）<br>shutterstock （有用过）<br>ibaotu、vjshi、淘宝</p>
+<h2 id="1-5-插画素材网站"><a href="#1-5-插画素材网站" class="headerlink" title="1.5 插画素材网站"></a>1.5 插画素材网站</h2><p><a target="_blank" rel="noopener" href="https://elements.envato.com/graphics/illustration" title="https://elements.envato.com/graphics/illustration">elements.envato.com&#x2F;graphics&#x2F;illustration</a><br><a target="_blank" rel="noopener" href="https://mixkit.co/free-stock-art/" title="https://mixkit.co/free-stock-art/">mixkit.co&#x2F;free-stock-art</a><br><a target="_blank" rel="noopener" href="https://icons8.com/mega-creator/dashboard/617294ba465ada00ce3d0b87" title="https://icons8.com/mega-creator/dashboard/617294ba465ada00ce3d0b87">icons8.com&#x2F;mega-creator&#x2F;dashboard&#x2F;617294ba465ada00ce3d0b87</a><br><a target="_blank" rel="noopener" href="https://zh.pngtree.com/illustration-design" title="https://zh.pngtree.com/illustration-design">zh.pngtree.com&#x2F;illustration-design</a><br><a target="_blank" rel="noopener" href="https://storyset.com/" title="Storyset  ">Storyset  </a></p>
+<h2 id="1-6-图片素材网站"><a href="#1-6-图片素材网站" class="headerlink" title="1.6 图片素材网站"></a>1.6 图片素材网站</h2><p><a target="_blank" rel="noopener" href="https://www.shutterstock.com/zh-Hant/" title="https://www.shutterstock.com/zh-Hant/">www.shutterstock.com/zh-Hant</a><br><a target="_blank" rel="noopener" href="https://www.pexels.com/zh-cn/" title="https://www.pexels.com/zh-cn/">www.pexels.com/zh-cn</a><br><a target="_blank" rel="noopener" href="https://pixabay.com/images/search/?order=ec" title="https://pixabay.com/images/search/?order=ec">pixabay.com&#x2F;images&#x2F;search&#x2F;?order&#x3D;ec</a><br><a target="_blank" rel="noopener" href="https://www.istockphoto.com/" title="https://www.istockphoto.com/">www.istockphoto.com</a></p>
+<h2 id="1-7-AI相关"><a href="#1-7-AI相关" class="headerlink" title="1.7 AI相关"></a>1.7 AI相关</h2><p><a target="_blank" rel="noopener" href="https://3d.csm.ai/" title="https://3d.csm.ai/">3d.csm.ai</a> ai三维模型生成<br><a target="_blank" rel="noopener" href="https://generated.photos/" title="https://generated.photos/">generated.photos</a> 高清图需要付费下载<br><a target="_blank" rel="noopener" href="https://www.artbreeder.com/i?k=7ccb0352720e9c697ce7" title="https://www.artbreeder.com/i?k=7ccb0352720e9c697ce7">www.artbreeder.com</a></p>
+<h2 id="1-8-其他"><a href="#1-8-其他" class="headerlink" title="1.8 其他"></a>1.8 其他</h2><p><a target="_blank" rel="noopener" href="https://pixel-me.tokyo/en/" title="像素画头像">像素画头像</a><br><a target="_blank" rel="noopener" href="http://fse.agilestudio.cn/" title="33搜帧">33搜帧</a><br><a target="_blank" rel="noopener" href="https://github.com/tori29umai0123/Line2Normalmap/tree/main" title="平面转法线项目">平面转法线项目</a><br><a target="_blank" rel="noopener" href="http://fantasycities.watabou.ru/" title="城市地图生成器">城市地图生成器</a><br><a target="_blank" rel="noopener" href="https://inkarnate.com/" title="中世纪地图生成器">中世纪地图生成器</a></p>
+<h1 id="2-三维"><a href="#2-三维" class="headerlink" title="2 三维"></a>2 三维</h1><p>Eagle的轻资产部分<br><a target="_blank" rel="noopener" href="https://www.626cg.com/" title="626cg">626cg</a><br><a target="_blank" rel="noopener" href="https://diekeji.com/" title="蝶科技">蝶科技</a><br><a target="_blank" rel="noopener" href="https://www.cgown.com/" title="CG资源网">CG资源网</a><br><a target="_blank" rel="noopener" href="https://quixel.com/megascans/home" title="Bridge">Bridge</a><br><a target="_blank" rel="noopener" href="https://polyhaven.com/" title="Polyhaven">Polyhaven</a><br>modown</p>
+<h2 id="2-1-二次元资产"><a href="#2-1-二次元资产" class="headerlink" title="2.1 二次元资产"></a>2.1 二次元资产</h2><p>MMD：aplaybox，<a target="_blank" rel="noopener" href="https://bowlroll.net/" title="BowlRoll">BowlRoll</a><br><a target="_blank" rel="noopener" href="https://3d.nicovideo.jp/" title="ニコニ立体">ニコニ立体</a></p>
+<h2 id="2-2-模型资产"><a href="#2-2-模型资产" class="headerlink" title="2.2 模型资产"></a>2.2 模型资产</h2><p>淘宝<br><a target="_blank" rel="noopener" href="https://www.cgmodel.com/" title="CG模型网">CG模型网</a><br><a target="_blank" rel="noopener" href="http://3d66.com/" title="3d66.com">3d66.com</a><br><a href="KitBash3D" title="KitBash3D">KitBash3D</a><br><a target="_blank" rel="noopener" href="https://www.photobash.co/kits" title="城市场景资产">城市场景资产</a><br><a target="_blank" rel="noopener" href="https://threedscans.com/" title="Free 3D scan">Free 3D scan</a><br><a target="_blank" rel="noopener" href="https://www.pbrmax.cn/" title="pbrmax">pbrmax</a><br><a target="_blank" rel="noopener" href="https://sketchfab.com/feed" title="Sketchfab">Sketchfab</a><br><a target="_blank" rel="noopener" href="https://www.cgtrader.com/" title="CGTrader">CGTrader</a><br><a target="_blank" rel="noopener" href="https://wirewheelsclub.com/" title="豪车模型wirewheelsclub">豪车模型wirewheelsclub</a><br><a target="_blank" rel="noopener" href="https://www.turbosquid.com/" title="TurboSquid">TurboSquid</a></p>
+<h2 id="2-3-HDR"><a href="#2-3-HDR" class="headerlink" title="2.3 HDR"></a>2.3 HDR</h2><p>HDR haven<br>MattePaint</p>
+<h2 id="2-4-材质贴图"><a href="#2-4-材质贴图" class="headerlink" title="2.4 材质贴图"></a>2.4 材质贴图</h2><p>Poliigon.com<br>Texture Ninja<br><a target="_blank" rel="noopener" href="https://www.textures.com/" title="Textures.com ">Textures.com </a><br><a target="_blank" rel="noopener" href="https://www.rd-textures.com/" title="rd-textures">rd-textures</a><br><a target="_blank" rel="noopener" href="https://ambientcg.com/" title="ambientcg.com">ambientcg.com</a></p>
+<h2 id="2-5-DAZ资源网站"><a href="#2-5-DAZ资源网站" class="headerlink" title="2.5 DAZ资源网站"></a>2.5 DAZ资源网站</h2><p><a target="_blank" rel="noopener" href="https://daz3d-poser.net/" title="https://daz3d-poser.net/">daz3d-poser.net</a><br><a target="_blank" rel="noopener" href="https://render-state.to/" title="https://render-state.to/">render-state.to</a></p>
+<h2 id="2-6-扫描图片还原3D资产"><a href="#2-6-扫描图片还原3D资产" class="headerlink" title="2.6 扫描图片还原3D资产"></a>2.6 扫描图片还原3D资产</h2><p><a target="_blank" rel="noopener" href="https://www.agisoft.com/" title="Agisoft">Agisoft</a>（亲测可用）<br><a target="_blank" rel="noopener" href="https://www.capturingreality.com/" title="CapturingReality">CapturingReality</a><br><a target="_blank" rel="noopener" href="https://alicevision.org/#meshroom" title="AliceVision Meshroom">AliceVision Meshroom</a>（<a target="_blank" rel="noopener" href="https://meshroom-manual.readthedocs.io/en/latest/index.html" title="操作指南">操作指南</a>）</p>
+<h2 id="2-7-UE相关"><a href="#2-7-UE相关" class="headerlink" title="2.7 UE相关"></a>2.7 UE相关</h2><p><a target="_blank" rel="noopener" href="https://gamedev3d.com/" title="https://gamedev3d.com/">gamedev3d.com</a><br><a target="_blank" rel="noopener" href="https://www.cggogo.cn/" title="https://www.cggogo.cn/">www.cggogo.cn</a><br><a target="_blank" rel="noopener" href="https://www.aigei.com/ue/list" title="https://www.aigei.com/ue/list">www.aigei.com/ue/list</a></p>
+<h1 id="3-娱乐"><a href="#3-娱乐" class="headerlink" title="3 娱乐"></a>3 娱乐</h1><p><a target="_blank" rel="noopener" href="https://www.xxx5217.com/category/game/" title="5217">5217</a><br><a target="_blank" rel="noopener" href="https://www.acgbox.link/" title="ACG盒子">ACG盒子</a><br><a target="_blank" rel="noopener" href="https://artsandculture.google.com/?hl=en" title="Artists — Google Arts &amp; Culture">Artists — Google Arts &amp; Culture</a></p>
+<h1 id="4-学习"><a href="#4-学习" class="headerlink" title="4 学习"></a>4 学习</h1><p><a target="_blank" rel="noopener" href="https://www.btbat.com/" title="找教程的R站">找教程的R站</a><br><a target="_blank" rel="noopener" href="https://chenwenb.com/" title="大元资源网">大元资源网</a><br><a target="_blank" rel="noopener" href="https://www.aboutcg.org/" title="ABOUTCG">ABOUTCG</a><br>翼狐网</p>
+<h1 id="5-日常办事处"><a href="#5-日常办事处" class="headerlink" title="5 日常办事处"></a>5 日常办事处</h1><p><a target="_blank" rel="noopener" href="https://tool.oschina.net/" title="计算机工具oschina">计算机工具oschina</a><br><a target="_blank" rel="noopener" href="https://tools.miku.ac/" title="奇怪工具合集MikuTools">奇怪工具合集MikuTools</a><br><a target="_blank" rel="noopener" href="https://tools.miku.ac/news/" title="国内新闻聚合">国内新闻聚合</a></p>
+<h1 id="6-专题"><a href="#6-专题" class="headerlink" title="6 专题"></a>6 专题</h1><h2 id="6-1-音乐相关"><a href="#6-1-音乐相关" class="headerlink" title="6.1 音乐相关"></a>6.1 音乐相关</h2><p><a target="_blank" rel="noopener" href="https://www.musicca.com/zh/chord-finder" title="和弦查找索引 – 钢琴、吉他和尤克里里的和弦 | Musicca">和弦查找索引 – 钢琴、吉他和尤克里里的和弦 | Musicca</a></p>
+<h2 id="6-2-日本相关"><a href="#6-2-日本相关" class="headerlink" title="6.2 日本相关"></a>6.2 日本相关</h2><p><a target="_blank" rel="noopener" href="https://anitabi.cn/map" title=" 动画巡礼 动画圣地巡礼 https://anitabi.cn/map"> 动画巡礼 动画圣地巡礼 https://anitabi.cn/map</a><br><a target="_blank" rel="noopener" href="https://space.bilibili.com/11100920" title="https://space.bilibili.com/11100920">space.bilibili.com&#x2F;11100920</a><br><a target="_blank" rel="noopener" href="https://www.japandict.com/" title="日语字典">日语字典</a><br><a target="_blank" rel="noopener" href="https://www.japan-travel.cn/" title="【官方】日本国家旅游局(JNTO)｜日本旅游">【官方】日本国家旅游局(JNTO)｜日本旅游</a><br><a target="_blank" rel="noopener" href="https://www.nippon.com/cn/" title="nippon.com 日本网">nippon.com 日本网</a><br><a target="_blank" rel="noopener" href="https://zh-tw.zekkeijapan.com/" title="精選日本人推薦的日本旅遊景點｜絕景日本">精選日本人推薦的日本旅遊景點｜絕景日本</a><br><a target="_blank" rel="noopener" href="https://recipe.rakuten.co.jp/" title="楽天レシピ -料理レシピ検索サイト">楽天レシピ -料理レシピ検索サイト</a><br><a target="_blank" rel="noopener" href="https://booth.pm/zh-cn" title="BOOTH - The International Indie Art Marketplace">BOOTH - The International Indie Art Marketplace</a><br><a target="_blank" rel="noopener" href="https://b-name.jp/" title="完全無料の子供の名前決め・名付け支援サイト「赤ちゃん命名ガイド」">完全無料の子供の名前決め・名付け支援サイト「赤ちゃん命名ガイド」</a><br><a target="_blank" rel="noopener" href="https://freepdfcomic.com/" title="Free PDF Comic – フリーPDFコミック 無料で読み放題">Free PDF Comic – フリーPDFコミック 無料で読み放題</a><br><a target="_blank" rel="noopener" href="https://tabelog.com/tw" title="https://tabelog.com/tw">tabelog.com&#x2F;tw</a></p>
+<h2 id="6-3-跑团"><a href="#6-3-跑团" class="headerlink" title="6.3 跑团"></a>6.3 跑团</h2><p><a target="_blank" rel="noopener" href="https://www.neka.cc/" title="捏咔-捏人创作分享平台">捏咔-捏人创作分享平台</a><br><a target="_blank" rel="noopener" href="https://picrew.me/ja/" title="Picrew｜つくってあそべる画像メーカー">Picrew｜つくってあそべる画像メーカー</a><br><a target="_blank" rel="noopener" href="https://shimo.im/sheets/9ph6YwVKwKrWgvp6" title="公骰列表">公骰列表</a><br><a target="_blank" rel="noopener" href="http://45.79.87.129/bbs/index.php?board=1772.0" title="杏の跑团小窝">杏の跑团小窝</a><br><a target="_blank" rel="noopener" href="https://maoyetrpg.com/online" title="猫爷TRPG——广州市文韬科技发展有限公司">猫爷TRPG——广州市文韬科技发展有限公司</a></p>
+
+  </div>
+  <div id="gitalk-container"></div>
+</div>
+
+<script>
+  
+Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
+  dragToClose: true,
+  Toolbar: true,
+  closeButton: "top",
+  Image: {
+    zoom: true,
+  },
+  on: {
+    initCarousel: (fancybox) => {
+      const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+    "Carousel.change": (fancybox, carousel, to, from) => {
+      const slide = carousel.slides[to];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+  },
+});
+</script>
+
+<style>
+    #noneimg img {
+        display: none;
+        z-index: 9999;
+        /* width: 600px !important; */
+        min-width: 0%;
+        max-width: 90%;
+        max-height: 80%;
+        border-radius: 0px;
+        position: fixed;
+        box-shadow: 0 0 0px #c3c3c300 !important;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto !important;
+    }
+
+    @media screen and (max-width:600px) {
+        #noneimg img {
+            max-width: 88%
+        }
+    }
+</style>
+
+    <div class="post-paging">
+    
+    <a href="/1899/other/RecommendedSoftware/">
+        <div class="post-paging-last">
+            <span>上一篇</span>
+            <p>个人Windows的工具软件推荐与体验优化</p>
+        </div>
+    </a>
+    
+
+    
+    <a href="/1899/other/ArchivePDF/">
+        <div class="post-paging-next">
+            <span>下一篇</span>
+            <p>归档</p>
+        </div>
+    </a>
+    
+</div>
+</div>
+		
+<div class="footer">
+	<div class="Copyright">
+		©2025 By 可能是水桶吧 <br>备案信息：<a
+			style="text-decoration: none;display: contents; color: #90defd;"
+			target="_blank" rel="noopener" href="http://beian.miit.gov.cn">ICP-123456</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://visnz.zcool.com.cn/">
+			<img src="/assets/website/zcool-icon2.png" alt="Quiet主题">
+		</a>
+		
+		<a target="_blank" rel="noopener" href="https://www.xiaohongshu.com/user/profile/599e99f650c4b40fb927384f">
+			<img src="/assets/website/xhs-icon.png" alt="Quiet主题">
+		</a>
+		
+		<a target="_blank" rel="noopener" href="https://space.bilibili.com/20477830">
+			<img src="/assets/website/bilibili-icon.png" alt="Quiet主题">
+		</a>
+		
+		<a href="/assets/blog/about/QQ_QRCode.jpg">
+			<img src="/assets/website/QQ-icon.png" alt="Quiet主题">
+		</a>
+		
+	</div>
+	</div>
+</div>
+
+<script src="/js/gotop.js"></script>
+
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            transition: border .5s;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .goTop {
+            display: none;
+        }
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $( '#js-go_top' )
+	.gotoTop( {
+		offset: 500,
+		speed: 300,
+		animationShow: {
+			'transform': 'translate(0,0)',
+			'transition': 'transform .5s ease-in-out'
+		},
+		animationHide: {
+			'transform': 'translate(100px,0)',
+			'transition': 'transform .5s ease-in-out'
+		}
+	} );
+</script>
+	</body>
+</html>
+

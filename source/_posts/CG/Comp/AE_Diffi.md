@@ -9,9 +9,7 @@ tags:
     - AfterEffects
     - OctaneRender
     - 多通道
-describe: ''
-categories: "CG通用相关"
-comments: false
+categories: "后期合成"
 ---
 # 问题
 角色本身的颜色受到空间光的影响，与原本设定颜色不符

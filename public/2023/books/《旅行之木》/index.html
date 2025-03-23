@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+<title>《旅行之木》笔记摘抄-.Backup</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/assets/blog/about/d.webp.jpg">
+
+<link rel="stylesheet" href="/css/index.css">
+
+
+<meta name="keywords" content="技术,美术,Blender,C4D,AE">
+<meta name="description" content="一些自己存在过的记录">
+
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/index.js"></script>
+
+
+<script src="/js/fancybox.umd.js"></script>
+
+
+<script src="/js/fancybox-images.js"></script>
+
+
+<script src="/js/gitalk.min.js"></script>
+
+<!-- 
+<script src="/js/hljs.min.js"></script>
+  -->
+<!-- <script>hljs.highlightAll();</script> -->
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		
+	<div class="header">
+		<div class="header-top" id="header-top">
+			<div class="h-left">
+				<a href="/">
+					<img src="/assets/blog/about/d.webp.jpg" alt="Quiet">
+				</a>
+			</div>
+			<div class="h-right">
+				<ul>
+					
+						
+								<li>
+									<a href="/">
+										封面
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/tags/累进式笔记">
+										精选
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/categories">
+										分栏
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/tags">
+										标记
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/archives">
+										时间线
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/links">
+										外链
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/about">
+										关于我
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+				</ul>
+			</div>
+			<div class="h-right-close">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+					<path fill="none" d="M0 0h24v24H0z" />
+					<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(68,68,68,1)" />
+				</svg>
+			</div>
+		</div>
+	</div>
+	<div class="sidebar">
+    <div class="topo">
+        <h2>可能是水桶吧</h2>
+    </div>
+    <ul>
+        
+        <li>
+            <a href="/">封面</a>
+        </li>
+        
+        <li>
+            <a href="/tags/累进式笔记">精选</a>
+        </li>
+        
+        <li>
+            <a href="/categories">分栏</a>
+        </li>
+        
+        <li>
+            <a href="/tags">标记</a>
+        </li>
+        
+        <li>
+            <a href="/archives">时间线</a>
+        </li>
+        
+        <li>
+            <a href="/links">外链</a>
+        </li>
+        
+        <li>
+            <a href="/about">关于我</a>
+        </li>
+        
+    </ul>
+    <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://visnz.zcool.com.cn/">
+            <img src="/assets/website/zcool-icon2.png" alt="Quiet主题">
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://www.xiaohongshu.com/user/profile/599e99f650c4b40fb927384f">
+            <img src="/assets/website/xhs-icon.png" alt="Quiet主题">
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://space.bilibili.com/20477830">
+            <img src="/assets/website/bilibili-icon.png" alt="Quiet主题">
+        </a>
+        
+        <a href="/assets/blog/about/QQ_QRCode.jpg">
+            <img src="/assets/website/QQ-icon.png" alt="Quiet主题">
+        </a>
+        
+    </div>
+</div>
+<div class='shelter'>
+</div>
+<style>
+    .shelter{
+        background-color: #333;
+        opacity:0.5;
+        cursor: pointer;
+        display: none; 
+        position: fixed;
+        left: 0;
+        top: 0; 
+        right: 0;
+        bottom: 0;
+        z-index: 1998;
+    }
+    .sidebar {
+        width: 66%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        bottom: 0;
+        background: #fff;
+        z-index: 1999;
+        text-align: center;
+        box-shadow: -6px 0 20px rgba(98, 94, 94, .815);
+    }
+
+    .topo {
+        width: 100%;
+        height: 200px;
+        background: url(/assets/blog/about/d.webp.jpg) no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        display: flex;
+        align-items: flex-end
+    }
+
+    .topo h2 {
+        color: #fff;
+        z-index: 1;
+        position: relative;
+        margin: 0 0 10px 10px;
+        font-size: 1.2em;
+        box-sizing: border-box
+    }
+
+    .topo:before {
+        content: '';
+        background-image: url(/image/pattern.png);
+        background-repeat: repeat;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1
+    }
+
+    .sidebar ul {
+        width: 100%;
+        margin-top: 50px
+    }
+
+    .sidebar ul li {
+        height: 50px;
+        list-style: none;
+        font-size: 1.2em;
+        text-align: right;
+        margin-right: 10px
+    }
+
+    .sidebar ul li a {
+        display: grid;
+        color: #5d606a;
+        text-overflow: ellipsis;
+        width: 100%;
+        text-decoration: none
+    }
+
+    .my_foot {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        position: absolute;
+        bottom: 0
+    }
+
+    .my_foot a {
+        text-decoration: none;
+        margin-right: 10px;
+        display: inline-block
+    }
+
+    .my_foot a img {
+        width: 30px;
+        height: 30px
+    }
+</style>
+
+<script>
+    $( function () {
+	$( '.h-right-close>svg' )
+		.click( function () {
+			$( '.sidebar' )
+				.animate( {
+					right: "0"
+				}, 500 );
+			$( '.shelter' )
+				.fadeIn( "slow" )
+		} );
+	$( '.shelter' )
+		.click( function ( e ) {
+			$( '.sidebar' )
+				.animate( {
+					right: "-100%"
+				}, 500 );
+			$( '.shelter' )
+				.fadeOut( "slow" )
+		} )
+} )
+
+</script>
+
+<div class="post">
+    <div class="post-header-background post-header-img"
+    style="background: url('/assets/blog/about/d.webp.jpg');background-repeat:no-repeat;background-position:top;" 
+>
+    <div class="post-header-background-content">
+        <ul class="post-header-tag">
+            
+        </ul>
+        
+        <h1>《旅行之木》笔记摘抄</h1>
+        <div class="post-header-info">
+            <div class="post-header-info-author">
+                
+                    <svg t="1604839279282" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="2901" width="20" height="20">
+                        <path
+                            d="M513 956.3c-247.7 0-448-200.3-448-448S265.3 66.2 513 66.2s448 200.3 448 448-200.3 442.1-448 442.1z m0-830.9c-212.2 0-388.8 170.7-388.8 388.8C124.2 726.3 294.9 903 513 903c212.2 0 388.8-170.7 388.8-388.8S725.2 125.4 513 125.4z m0 430.2c-94.2 0-170.7-76.5-170.7-170.7S418.8 207.8 513 207.8s170.7 76.5 170.7 170.7S607.2 555.6 513 555.6z m0-289.1c-64.6 0-112 52.8-112 112s47.4 117.9 112 117.9 112-52.8 112-112-47.4-117.9-112-117.9z m0 689.8c-135.7 0-259-58.7-341.9-158.9l-11.8-17.8 11.8-17.8c76.5-117.9 206.2-188.5 347.8-188.5 135.7 0 265 64.6 341.9 182.6l11.8 17.8-11.8 17.8C778 897.1 648.7 956.3 513 956.3zM230.3 773.2C300.9 849.7 406.9 897 513 897c112 0 218.1-47.4 288.6-129.8-70.5-88.2-170.7-135.6-282.7-135.6s-218.1 53.3-288.6 141.6z"
+                            p-id="2902" fill="#ffffff"></path>
+                    </svg>
+                    
+                <span class="post-header-info-author-text"> <a href="/index.html">可能是水桶吧</a></span>
+                <div class="post-header-info-author-categories">
+                    
+                         <a href="/categories/读书笔记/" target="_blank" >读书笔记</a>
+                    
+                </div>
+                <p>2023-06-22 00:00:00</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="post-content" id="content">
+  
+  <div id="article" class="post-content-info">
+    
+
+    <h1 id="《旅行之木》"><a href="#《旅行之木》" class="headerlink" title="《旅行之木》"></a>《旅行之木》</h1><p>《旅行之木》<br>星野道夫<br>150个笔记</p>
+<h2 id="◆-点评"><a href="#◆-点评" class="headerlink" title="◆ 点评"></a>◆ 点评</h2><p>2023&#x2F;06&#x2F;22 认为好看</p>
+<h2 id="◆-第一编"><a href="#◆-第一编" class="headerlink" title="◆ 第一编"></a>◆ 第一编</h2><blockquote>
+<p>在阿拉斯加的生活已然走过了15个年头，可我依然喜欢这片土地的季节感。四季的流转就跟翻书页一样，干脆而分明。</p>
+</blockquote>
+<blockquote>
+<p>人的心境也真是够滑稽的了。因为它会无可救药地被鸡毛蒜皮的日常生活所左右，却也能在风的感触与初夏气息的撩拨下心花怒放。人心是那么深奥，却也浅薄得不可思议。人之所以能活下去，也一定有这份浅薄的功劳吧。</p>
+</blockquote>
+<blockquote>
+<p>明明是看着就让人脸颊发烫的内容，但怀着一片真心，想要走进阿拉斯加这片未知世界的自己就在那里。我不禁把整理工作放在一边，翻着老旧的日记本读出了神。</p>
+</blockquote>
+<blockquote>
+<p>既没有找到指南针，手头也没有地图，但无论如何都得扬帆起航。</p>
+</blockquote>
+<blockquote>
+<p>现在回想起来，我也不由得感叹，自己怎么能对初次见面的系主任说这么一通歪理呢。毕竟我的难处和想法，跟大学一点关系都没有啊。但我当时已经被逼得走投无路了，只觉得“因为区区30分无法入学”的规定简直太不讲道理了。</p>
+</blockquote>
+<blockquote>
+<p>带着形形色色的梦想来到阿拉斯加的我，仿佛是为了逐一消化待办事项一般踏上了旅程。我必须在名为“阿拉斯加”的雪白地图上，一笔一画地绘制属于我自己的地图。</p>
+</blockquote>
+<blockquote>
+<p>我走进了横贯阿拉斯加北极圈的布鲁克斯山脉（Brooks Range），漫步于从未有人涉足的高峰与山谷。我坐皮艇游览冰川湾（Glacier Bay），侧耳倾听冰川的摩擦带来的远古的回响。我与爱斯基摩人￼划着爱斯基摩皮筏（Umiaq，用海豹皮做的小船），在北冰洋追逐北太平洋露脊鲸（Eubalaena japonica）。我在阿萨巴斯卡印第安人（Athabascan Indians）的村子里见到了极具魔法色彩的夸富宴（potlatch）。我为驯鹿的季节性迁徙所倾倒，执着地追踪那恢弘的旅程。我无数次仰望极光，还遇见了狼。最重要的是，我了解到了各种人的生活……不知不觉中，15年的岁月就这么过去了。</p>
+</blockquote>
+<blockquote>
+<p>我自己的阿拉斯加地图也一点点成形了。如今，包含着宏伟自然的阿拉斯加也迎来了重大的过渡期。</p>
+</blockquote>
+<blockquote>
+<p>我觉得人类与自然的关系就是个永恒的主题，永远都找不到绝对正确的答案。</p>
+</blockquote>
+<blockquote>
+<p>写了这么多零零碎碎的东西，都是因为突然现身的旧日记本勾起了教人无比怀念的回忆，把曾经的自己带到了我面前。看过以后，我着实发了好一会儿呆。感觉十五年的岁月看似很长，其实也很短呢。</p>
+</blockquote>
+<blockquote>
+<p>我还冒出了一个念头：能不能再一次变回当时的自己呢？我的意思是，能不能让这么多年积累下来的地图从我眼前悄然消失，让我拾回手头没有指南针与罗盘，却必须扬帆起航的那股冲动与激情呢？能不能让我踏上连目的地的港口在哪儿都不知道的全新旅程呢？说不定，从某种意义上讲，每个人的人生也许都是这么回事呢。</p>
+</blockquote>
+<blockquote>
+<p>再过个一星期，便会有无数大马哈鱼如滚滚怒涛般逆流而上。用双手抓住一条大马哈鱼，它便会像弹簧一样激烈跳动。而这种跳动的力量，总能让我切身感觉到阿拉斯加的夏天。</p>
+</blockquote>
+<h2 id="◆-红崖海湾"><a href="#◆-红崖海湾" class="headerlink" title="◆ 红崖海湾"></a>◆ 红崖海湾</h2><blockquote>
+<p>今天并没有发生什么激动人心的大事，但我十分满足，特别想与人分享这份心情，于是便拿起了笔。</p>
+</blockquote>
+<blockquote>
+<p>阿拉斯加东南部的海其实很丰饶，大比目鱼、大马哈鱼、螃蟹什么的随时都能抓到，旅行途中也不愁没有新鲜的吃食。大比目鱼甚至能钓到将近一米长的大家伙呢。海水的透明度很低，但这正是丰饶的象征。这片海无异于一大碗浮游生物浓汤。</p>
+</blockquote>
+<blockquote>
+<p>夜晚明明还一点儿都不黑，极光却因为太过强烈，冲破了白夜的明亮，显现出来。那可是盛夏的极光啊。</p>
+</blockquote>
+<blockquote>
+<p>突然，小鲸鱼调整了行进的方向。它离开母亲，悄悄接近小船，还仰头看了我们一眼，仅此而已。在那之后，我们继续跟鲸鱼母子同行了将近两个小时吧。眼看着红日西斜，我们得往今晚要停泊的海湾去了。</p>
+</blockquote>
+<blockquote>
+<p>这片海的妙处之一，就是不计其数的美丽海湾。每一座海湾，都是原生自然的世界，绝无人类的踪迹。在被错综复杂的峡湾地形环绕的内海，漂浮着无数大小不一的岛屿，它们的表面完全被茂密的原生林与冰川所覆盖。在这片海域旅行的一大乐趣，也许就是每天选择不同的海湾下锚吧。</p>
+</blockquote>
+<blockquote>
+<p>这座海湾承载了我太多太多的回忆。而且我每次来到这里，都会任思绪飘向那悠久的时光。那是让我们暂时忘却人类的日常生活，无关悲喜的另一种时间的洪流。</p>
+</blockquote>
+<blockquote>
+<p>不久后，我们抵达了海湾的最深处，抛下了锚。一关马达，真正的寂静便将我们彻底包围。之前没察觉到的声响都能一点点听清了。</p>
+</blockquote>
+<blockquote>
+<p>夜深了，满天星斗。我们左等右等，都没有等到极光，月亮却爬上来了。</p>
+</blockquote>
+<h2 id="◆-北国之秋"><a href="#◆-北国之秋" class="headerlink" title="◆ 北国之秋"></a>◆ 北国之秋</h2><blockquote>
+<p>今天早上，不知从何处传来了沙丘鹤（Grus canadensis）的合唱。咕咕咕咕……仰望蔚蓝的天空，却找不到它们的踪影。</p>
+</blockquote>
+<blockquote>
+<p>等到欧洲山杨（Populus tremula）与白桦的叶子开始发黄，苔原的地毯染上了酒红色，阿拉斯加便迎来了短暂的秋天。新绿的全盛期只能持续一天，红叶的全盛期同样也只有一天。原野的秋色是一天深过一天，由各种植物编织而成的苔原马赛克美不胜收。</p>
+</blockquote>
+<blockquote>
+<p>蓝莓、蔓越莓等树果成熟了。候鸟吃个不停，为漫长的南下之旅做准备。熊也拼命地吃，为漫长的冬眠积蓄脂肪。北国自然的恩泽与南方略有不同。那是在严苛的环境中被高度浓缩，然后在转瞬间散去的自然恩泽，带着某种紧张感。</p>
+</blockquote>
+<blockquote>
+<p>在秋季的山林漫步时，每每觉得乏累，我都会摘些蓝莓吃。找一片蓝色的果串隐约可见的树丛，一屁股坐下来，把伸手可及的蓝莓都吃光，再挪个几米接着吃就行了。回过神来才发现，今年我的裤子又染上了红色与蓝色的污渍。</p>
+</blockquote>
+<blockquote>
+<p>就在我穿越山谷间的陡坡时，不知从哪里传来了一种十分可爱的叫声。哔！哔！我仔细观察四周，只见一块大石头的顶上端坐着一只鼠兔（pika），叼着满满一嘴的枯草。说时迟那时快，它跟离弦的箭一般撒腿就跑。我一路紧追，跟到一处岩缝，看着还挺像它的藏身之地的。蹲下来一瞧，发现岩缝里铺着整整齐齐的枯草。它也在为即将到来的冬天一点点囤积物资呀。</p>
+</blockquote>
+<blockquote>
+<p>通过流转的季节，我们能真真切切地感觉到朝无尽的彼方流淌的时间。我觉得大自然的这套机制真是再妙不过了。一年一度，转瞬即逝，教人依依不舍的季节，我还能在人世间与它相逢几回？也许清算剩余的次数，才最能让我们痛感人生的短暂。</p>
+</blockquote>
+<h2 id="◆-春天的脚步声"><a href="#◆-春天的脚步声" class="headerlink" title="◆ 春天的脚步声"></a>◆ 春天的脚步声</h2><p>2023&#x2F;06&#x2F;17发表想法<br>近来很好哟</p>
+<blockquote>
+<p>近来可好？</p>
+</blockquote>
+<blockquote>
+<p>近来可好？</p>
+</blockquote>
+<blockquote>
+<p>日照时间也是一天长过一天，心中已是春意盎然了。</p>
+</blockquote>
+<blockquote>
+<p>只是在这片土地上，生与死的风景实在是太泾渭分明了，当时的愕然至今历历在目。</p>
+</blockquote>
+<blockquote>
+<p>阿拉斯加的鸟大多是候鸟，但也有极少数的留鸟，在气温会低至零下60度的费尔班克斯也能过冬。白腰朱顶雀就是其中之一。这种鸟只有10厘米长，天知道它们是如何在这样的严寒中生存的。</p>
+</blockquote>
+<blockquote>
+<p>我总觉得，我们一天天地活着并不是理所当然，而是莫大的奇迹。归根结底，连我们此刻的心脏搏动都是一种奇迹。</p>
+</blockquote>
+<blockquote>
+<p>接下来的日子怕是会乍暖还寒，还会下好几场雪吧。不过这片土地定会在冷暖的拉锯战中走向新的季节。</p>
+</blockquote>
+<h2 id="◆-狼"><a href="#◆-狼" class="headerlink" title="◆ 狼"></a>◆ 狼</h2><blockquote>
+<p>这里没有活物的踪迹，也没有绽放的鲜花，无机的风景仿佛将来到这里的一切拒之门外。这个世界好像有一种不可思议的力量，能将人的情绪升华到一个新的高度。</p>
+</blockquote>
+<blockquote>
+<p>“我们需要一个神圣的地方，名为‘时间’的墙壁在那里消失，契机在那里显现。今天早上的报纸上刊登了什么新闻，谁是我的朋友，我欠了谁的人情，谁欠了我的人情……让我们忘却这一切的空间，或是一天之中能忘却这一切的某一刻是必不可缺的。那个地方能让我们纯粹地体验原原本本的自己，体验自己未来的模样。这是创造性的孵化场。起初看似什么都不可能发生，可你要是有属于自己的神圣的地方，并且使用了那个地方，变化总有一天是会发生的。人会通过圣地的创造和动植物的神话化将某片土地变成自己的所有物。换言之，我们会将自己居住的土地变成拥有深刻灵性含义的地方。”</p>
+</blockquote>
+<blockquote>
+<p>。但是滑雪板在万籁俱寂的世界一路滑行的声响美妙得难以言喻。而且你会觉得自己一点点融入了这片广漠的风景。</p>
+</blockquote>
+<blockquote>
+<p>我放下登山包，啜着膳魔师里的热咖啡，在月光下置身于深夜的冰川中央。除了不时从某处传来的雪崩声，周围没有任何会动的东西，也没有丝毫的声响。夜空中点缀着万千星斗，流星以眨眼般的间隔滑落。曾几何时，去撒哈拉旅行过的朋友提起过的沙漠之“夜”大概也是这样的吧。只有沙子与星星的夜晚世界，会对人类产生不可思议的力量。</p>
+</blockquote>
+<blockquote>
+<p>我们平时生活在信息过剩的社会中，怕是已经忘记了还有这样的世界存在吧。所以被突然丢到这样一个地方时，人也许会手足无措，不知道该怎么办才好。但是在那儿耐心待上一会儿，你就会渐渐拾回信息极少的世界所特有的精彩。那算是一种力量吧，就跟被我们遗忘的想象力差不多。</p>
+</blockquote>
+<blockquote>
+<p>我只觉得在这个没有丝毫活物痕迹的世界，自己与一只三道眉草共享的时间真是有趣极了。</p>
+</blockquote>
+<blockquote>
+<p>我与这座鲁斯冰川有过一段几乎从没跟别人提过的回忆。</p>
+</blockquote>
+<blockquote>
+<p>在只有岩石与冰块的无机世界，孤狼漫步远行的夜晚的确存在过。在仔细琢磨这件事的过程中，我竟莫名地觉得，那里也成了一个非常神圣的地方。</p>
+</blockquote>
+<h2 id="◆-加拉帕戈斯的落日"><a href="#◆-加拉帕戈斯的落日" class="headerlink" title="◆ 加拉帕戈斯的落日"></a>◆ 加拉帕戈斯的落日</h2><blockquote>
+<p>山谷中时不时会出现一座孤零零的小村落。那是我完全想象不出来的世界，所以每发现一座村庄，我都会出神地盯着它看，直到它从我的视野中消失。有人生活的风景总能让我心醉神迷。</p>
+</blockquote>
+<blockquote>
+<p>“世界”原本是一个能无限延伸的抽象词语，我却能用现实的感觉去把握它了，这就是不安的来由，地球、人类这种宏大的概念仿佛都变得“有限”了，让我不知如何是好，有些落寞。</p>
+</blockquote>
+<blockquote>
+<p>“我们走得太快了，把心撂在了半路上。在心追上来之前，我们要在这里等着。”</p>
+</blockquote>
+<blockquote>
+<p>第一次异国之旅明明充满了趣味，对阿拉斯加的牵肠挂肚却变得愈发强烈了。</p>
+</blockquote>
+<blockquote>
+<p>与此同时，他也跟我讲起了在哥伦比亚靠摄影吃饭有多么艰难，面临着怎样的两难境地。首先，那边压根没有能发表摄影作品的媒体。自然杂志什么的当然也是不存在的。我通过埃尔多的诉说，渐渐了解了他的贫苦生活。没有像样的住处，除了摄影器材几乎一无所有。器材也一点都不够用。我简直不敢相信自己的耳朵。埃尔多可是代表哥伦比亚来参加这个项目的自然摄影师啊。</p>
+</blockquote>
+<blockquote>
+<p>那不是一种兴趣爱好，而是近似于信仰的东西。</p>
+</blockquote>
+<blockquote>
+<p>在邂逅一个人、愈发喜欢上这个人的过程中，相应的风景会愈发宽广，愈发深邃。我还是想把世界想成包含着无限宽广的东西的。</p>
+</blockquote>
+<blockquote>
+<p>对了对了，赤道的落日真是让我大开眼界。在阿拉斯加，太阳几乎是以水平的路径慢慢落下，但加拉帕戈斯的太阳会迅速沉入水平线，于是世界便在一瞬间迎来了黑夜。</p>
+</blockquote>
+<h2 id="◆-老渡鸦"><a href="#◆-老渡鸦" class="headerlink" title="◆ 老渡鸦"></a>◆ 老渡鸦</h2><blockquote>
+<p>近来可好？这边迎来了7月，每天都挺热的</p>
+</blockquote>
+<p>2023&#x2F;06&#x2F;19发表想法<br>这边六月底啦 好快就能追上你了</p>
+<blockquote>
+<p>近来可好？这边迎来了7月，每天都挺热的</p>
+</blockquote>
+<blockquote>
+<p>库钦族两年一度举办集会的初衷，其实是让大家聚在一起，讨论部族面临的种种问题。对油田开发的担忧、守护狩猎生活、传统价值观的丧失、酗酒、逐渐消失的语言、年轻人的未来……每天都有相应的主题，从早上一直讨论到傍晚。那些问题，也是置身于现在与新时代的夹缝中的全体阿拉斯加原住民所面临的问题。</p>
+</blockquote>
+<blockquote>
+<p>唯一正确的答案，也许打从一开始就不存在……如此想来，我就会稍微放心一点儿。也不知道为什么，“不用给出正确答案”总是能让人放心的。</p>
+</blockquote>
+<blockquote>
+<p>我们的轨迹只不过在旧克罗村有了一段短暂的交错，对对方的人生一无所知。</p>
+</blockquote>
+<blockquote>
+<p>壮丽的原野无边无垠。水彩画一般的云朵飘浮在半空，天空是如此宽广。咕咕，咕咕……渡鸦一边叫着，一边消失在天际。</p>
+</blockquote>
+<h2 id="◆-写在萨尔茨堡"><a href="#◆-写在萨尔茨堡" class="headerlink" title="◆ 写在萨尔茨堡"></a>◆ 写在萨尔茨堡</h2><blockquote>
+<p>这趟旅程总共只有10天，与其走马观花，还不如找准一座城市，慢慢感受。</p>
+</blockquote>
+<blockquote>
+<p>在这里，历史不再是干巴巴的知识，而是俨然存在于眼前的风景。在这样一个地方生活，可真是一件不得了的事情啊。我觉得这样的景色一定会在某个方面影响人类的思想。我们究竟从何而来——它应该能让我们下意识地感觉到那种肉眼看不到的时间洪流吧。</p>
+</blockquote>
+<blockquote>
+<p>比起游览名胜古迹，我更喜欢去街角的咖啡厅或者偏僻的小餐馆观察人们的表情，所以我每天都用这样的方法到处溜达，享受着萨尔茨堡这座城市。每到下午，我都要去一家叫“莫扎特”的咖啡厅，一边喝咖啡，一边打量那些下象棋、看报纸的人。他们就坐在我旁边，相隔不过几米远，我却对他们的人生一无所知，到头来也不会和他们认识，多有趣啊。</p>
+</blockquote>
+<blockquote>
+<p>啊，对了对了，我的头发正好长长了，所以今天还去了趟理发店。旅行时，要想闻一闻当地人的“味道”，最好的方法就是去理发店，这是我的一贯主张。你问我为什么，我也说不出个所以然来，反正只要跟当地人一起坐在理发店的椅子上，让理发师剪个头发，刮个胡子，发个呆什么的，我就会莫名地有种自己变成了当地人的感觉。</p>
+</blockquote>
+<blockquote>
+<p>在我看来，欧洲阿尔卑斯山区小得跟园林盆景似的。虽然很美，但没有深度。那的确是能让人安心的自然，却没有将人类拒之门外的恢弘。我切身体会到，欧洲人之所以被阿拉斯加所吸引，是因为他们想要看一看真正野生的自然。</p>
+</blockquote>
+<blockquote>
+<p>百年前在阿拉斯加留下了足迹的人如此说道：“年轻时别去阿拉斯加，到人生的尾声再去吧。”言外之意，要是早早去了阿拉斯加，你就会觉得其他世界太小了，不够味。倒不是说大的自然就一定好，小的自然就一定不好，只是我不由主地想起了遥远过去的旅行者说过的这番话。</p>
+</blockquote>
+<blockquote>
+<p>我开始觉得一万年前离我们好像也没有那么远。只要以“人的一辈子”为单位，一代代往上追溯历史，那就不是难以伸手触及的往昔。不，岂止可以触及啊，最后的冰河时代其实就发生在不久前啊。</p>
+</blockquote>
+<blockquote>
+<p>看着文艺复兴时期的建筑，意识到那不过是短短四五百年前的东西，我不禁愕然。这种愕然针对的当然是人类历史的短浅，但也有可能是针对人类生活变化之快的吧。</p>
+</blockquote>
+<blockquote>
+<p>“自己亲眼所见”和“看书、听别人讲”终究是完全不一样的体验呢。</p>
+</blockquote>
+<h2 id="◆-阿米什人"><a href="#◆-阿米什人" class="headerlink" title="◆ 阿米什人"></a>◆ 阿米什人</h2><blockquote>
+<p>美国集现代文明的精粹于一身，这群人却构筑起了与人类历史逆行的社会。我早就觉得他们不可思议极了。换言之，他们是彻底提防着进步的一群人。</p>
+</blockquote>
+<blockquote>
+<p>关键还是在于她的气场。活在现代文明中的孩子绝不会有那样的气场。在挑选工艺品的时候，我不经意地望向她，却发现她也在偷偷盯着我看。</p>
+</blockquote>
+<blockquote>
+<p>哦，也许她会时不时跟家人坐马车到镇里，去那家店吃三明治。当那一幕光景浮现在眼前时，我竟莫名地松了口气，喜从中来。</p>
+</blockquote>
+<blockquote>
+<p>我们曾对人类的进步史坚信不疑。而此时此刻，我们逐渐察觉到“进步”所包含的阴影，呆若木鸡，驻足不前。</p>
+</blockquote>
+<blockquote>
+<p>太阳已经完全落山了，镇里的大马路也亮起了温暖的灯光。感恩节将至，这座美国乡间小镇也是流光溢彩。</p>
+</blockquote>
+<h2 id="◆-第二编"><a href="#◆-第二编" class="headerlink" title="◆ 第二编"></a>◆ 第二编</h2><blockquote>
+<p>奋战了30多年，最后兵败离去……十多岁时的我还无法体会其中的深意。但现在的我明白了，直行先生用“拿起画笔”肯定了那段岁月，赢得了最终的胜利。</p>
+</blockquote>
+<h2 id="◆-岁月"><a href="#◆-岁月" class="headerlink" title="◆ 岁月"></a>◆ 岁月</h2><blockquote>
+<p>临别时，我半开玩笑地说道。报上说，千叶大学有一支三人小队遇难了，其中之一就是T。我永远也不会忘记，那晚开往上野的夜班火车有多慢。</p>
+</blockquote>
+<blockquote>
+<p>屋里的窗户敞开着，大片繁盛的野草鲜绿得刺眼，在风中起起伏伏。明明出了这么大的事，另一个我却在为窗外的风景心醉。我心想，在漫长的岁月过后，我总有一天会想起这片繁盛的夏草。也不知为何，我在那一刻第一次清楚地认识到，T已经离开了这个世界。</p>
+</blockquote>
+<blockquote>
+<p>现在回想起来，那件事好像为我的青春划上了一个句号。在T死后，我一直在寻觅一个明确的结论。不抓住它，我就无法前进。在一年后的某一天，我突然找到了答案。特别简单，“做自己喜欢的事吧”。“T的离世”绕了一大圈，带来了“我此刻正活着”的实感。回过神来才发现，我还是回到了T的母亲在事发现场对我说的话。</p>
+</blockquote>
+<blockquote>
+<p>我回到了大学校园，却发现那已经不再是我该待的世界了。捧着网球拍谈笑风生的学生，在告示牌跟前发表煽动演讲的学生……司空见惯的风景仿佛也变成了另一个世界。未来还是一片模糊，但我唯一确定的是，我现在非得离开这里不可。</p>
+</blockquote>
+<blockquote>
+<p>在T死后，我一直在奔跑，从未停歇。</p>
+</blockquote>
+<blockquote>
+<p>无可替代之人的离去，往往会为苟活于世的人持续注入巨大的能量。</p>
+</blockquote>
+<blockquote>
+<p>阿姨，有机会咱们一定要打两盘呀！”<br>我说道。<br>她开心地点了点头。<br>我是真心期盼着，有朝一日能跟T的母亲来一场乒乓球比赛。</p>
+</blockquote>
+<h2 id="◆-海流"><a href="#◆-海流" class="headerlink" title="◆ 海流"></a>◆ 海流</h2><blockquote>
+<p>之所以总是下意识地往这儿跑，大概是因为我从小就有逛书店的习惯，到现在也没改掉吧。</p>
+</blockquote>
+<blockquote>
+<p>我能透过每一本书，听到曾在这片土地生活过的人的声音。</p>
+</blockquote>
+<blockquote>
+<p>“好多在现实中很重要的事都被我忘光了，可是一碰上跟阿拉斯加的历史有关的，我连特别无聊的细节都能记得清清楚楚呢。”</p>
+</blockquote>
+<blockquote>
+<p>瞭望台书店不光有旧书，还收藏了大量的老地图。每个人都会把梦想寄托在某种东西上，而年迈的迪伊始终把自己的梦想倾注在地图中。</p>
+</blockquote>
+<blockquote>
+<p>“对地图史的兴趣，说到底就是对人的兴趣呀。因为地图会告诉我们，我们是怎么样一点点把握住这个世界的。”</p>
+</blockquote>
+<blockquote>
+<p>我甚至觉得，撑起瞭望台书店的不光是它的藏书，还有这位老奶奶的渊博知识。</p>
+</blockquote>
+<blockquote>
+<p>他们定是接受了这辈子再也无法回归故乡的命运，选择与这片陌生土地的子民共生共存。倘若真是如此，他们有没有将新鲜的血液注入当地原有的文化呢？漂流民的历史究竟能追溯到什么时候呢？</p>
+</blockquote>
+<blockquote>
+<p>结束了一天的工作以后，他们喜欢在傍晚时分去海边散散步，顺便找找被冲上岸边的漂流物。他们要找的不是寻常的破烂，而是从遥远的世界一路漂来的神秘漂流物。据说风暴过境后的海滩寻宝尤其有趣。</p>
+</blockquote>
+<blockquote>
+<p>殊不知那些浮标背后，也许隐藏着恢弘的故事……</p>
+</blockquote>
+<h2 id="◆-第三编"><a href="#◆-第三编" class="headerlink" title="◆ 第三编"></a>◆ 第三编</h2><blockquote>
+<p>现如今，连现代都远去了，科幻片一般的21世纪即将到来……可令人难以置信的是，在遥远的远北世界，还保留着最后一片远古的风光。那是蒙着白色面纱的驯鹿大军。它们至今徘徊在北极圈的原野。</p>
+</blockquote>
+<blockquote>
+<p>“道夫啊，你说100年后，这里会变成什么样子啊……”<br>唐突然抛出这么一句话来。这样的时刻总能让我痛感，他也怀着跟我一样的念想凝望着阿拉斯加的自然。</p>
+</blockquote>
+<h2 id="◆-早春"><a href="#◆-早春" class="headerlink" title="◆ 早春"></a>◆ 早春</h2><blockquote>
+<p>4月的风柔软和煦，缓缓吹散了紧绷的冬日大气，也让那些在严苛的季节中煎熬的人们慢慢放松下来。为什么太阳的温度和春天的气息就算只有一丁点，也能让人产生幸福感呢？</p>
+</blockquote>
+<blockquote>
+<p>因为熊的存在，能唤醒人类已然忘却的，作为生物的紧张感。如果熊从这片土地消失了，在野营之夜可以高枕无忧，不必再有任何担心了，那样的自然该有多无趣啊。</p>
+</blockquote>
+<blockquote>
+<p>熊居然要在这么小的空间待整整半年，等候春天的到来吗？</p>
+</blockquote>
+<blockquote>
+<p>比起在夏天的原野四处行走的模样，冬眠中的熊让我感觉到了更强大的生命力。我走在雪路上，心中充满了幸福，激动得直想大声呼喊。</p>
+</blockquote>
+<blockquote>
+<p>春天离阿拉斯加越来越近了。</p>
+</blockquote>
+<h2 id="◆-鲁斯冰川"><a href="#◆-鲁斯冰川" class="headerlink" title="◆ 鲁斯冰川"></a>◆ 鲁斯冰川</h2><blockquote>
+<p>头顶的闪耀，仿佛触手可及。听说那些光亮来自数万年前，乃至数亿年前，经过漫漫长路，才终于抵达了地球。如果无数的星斗都在绽放各自的光年，那么仰望夜空的繁星，就等于是在刹那间凝望那无限遥远的宇宙历史。</p>
+</blockquote>
+<blockquote>
+<p>去年春天，我与学生时代的伙伴们一起，带着11个孩子走进了这片冰川。小的还在上小学，大的已经是高中生了。我们搭乘小小的塞斯纳飞机，深入两边紧挨着陡峭的岩壁与冰壁的冰川，在厚厚的新雪上着陆，一路排雪开道，终于抵达了这座小屋。孩子们突然被丢在广漠的冰川上，刚开始难免有些手足无措，好在他们后来也一点点融入了四周的风景。</p>
+</blockquote>
+<blockquote>
+<p>享受这次旅行</p>
+</blockquote>
+<blockquote>
+<p>冬季的营地生活从融雪取水开始。水要用来喝，用来做饭，用来洗餐具……水是如此宝贵，必须把每一滴用在刀刃上。</p>
+</blockquote>
+<blockquote>
+<p>孩子们就这样走出仿佛裹了一层糯米纸的城市生活，一点点回归自然……在这个什么都没有的世界，吃饭睡觉，做好保暖工作，维持自己的生命，才是最重要的事情。即便只有短短的一周，试着停下脚步关注这件非常单纯的事，肯定也是大有好处的。</p>
+</blockquote>
+<blockquote>
+<p>孩子王K在干什么呢？他正在小屋里，忙着给火炉添柴火，也不知道他有没有认真看极光。不过，孩子们脑海中的记忆也许具有无限的潜能。来日方长，何必急于一时。回到日本，恢复忙碌的日常生活后，他们甚至可以把鲁斯冰川抛之脑后。但我想知道，在5年后、10年后，他们是怎么想的。因为我觉得一段体验要在某个人心里成熟，形成某种东西，应该是需要一些时间的。</p>
+</blockquote>
+<blockquote>
+<p>鲁斯冰川是只有岩石、冰雪和星星这几种无机物的高山世界。对浸泡在信息汪洋中的孩子们来说，这个世界与他们习惯的生活是完全相反的。然而，正因为“什么都没有”，我们才能在这里感觉到寂静的宇宙气息。在冰川上度过的夜晚的宁静，风的冰凉，繁星的闪耀……信息少的地方，其实更蕴含着某种力量。因为这样的光景，能给我们机会张开想象的翅膀啊。</p>
+</blockquote>
+<blockquote>
+<p>下山那天，早春的阳光洒在我们身上。遥远的麦金利山光芒万丈。</p>
+</blockquote>
+<h2 id="◆-另一种时间"><a href="#◆-另一种时间" class="headerlink" title="◆ 另一种时间"></a>◆ 另一种时间</h2><blockquote>
+<p>“要是在东京也能每晚看到那么多星星，那就太爽啦……工作到深夜，带着一身疲惫下班时，随便抬头一看，宇宙仿佛就在触手可及的地方。能在每天快结束的时候看到那样的光景，是个人都会浮想联翩的吧。”</p>
+</blockquote>
+<blockquote>
+<p>“有一次，有个朋友问了我一个问题：假设你独自看到了这样的星空，或是美得让人热泪盈眶的夕阳，你会用什么样的方法把风景之美与当时的心情传达给心爱的人呢？”</p>
+</blockquote>
+<blockquote>
+<p>“朋友是这么说的：‘我会用自己的变化告诉他’……他觉得，被夕阳的美感动，自己渐渐改变，就是把自己的心情传达给对方的好方法。”</p>
+</blockquote>
+<blockquote>
+<p>我们一天天地活着，而就在同一个瞬间，另一种时间也的的确确在缓慢地流动着。能不能在每天的日常生活中用内心的角落惦记着这一点，必定会带来天壤之别。</p>
+</blockquote>
+<h2 id="◆-寻觅图腾柱"><a href="#◆-寻觅图腾柱" class="headerlink" title="◆ 寻觅图腾柱"></a>◆ 寻觅图腾柱</h2><blockquote>
+<p>因为故事已经从篆刻图腾柱的人们心中消失了。鲸鱼也好，熊也好，海雕也好，都消失在了万里之遥。</p>
+</blockquote>
+<blockquote>
+<p>进入20世纪后，强国的博物馆开始积极搜罗全世界的历史文物。夏洛特皇后群岛也没能幸免。许多图腾柱被搬走了，好在幸存的海达族后裔一个接一个站了起来。他们希望让这些神圣的地方自然而然地朽烂，就连想方设法要将人类史的瑰宝图腾柱保存下来的外界压力都遭到了他们的顽强抵抗。</p>
+</blockquote>
+<blockquote>
+<p>人类的历史在没有刹车的状态下，在看不见终点的迷雾中一路狂奔。但人类今后若想继续存在下去，我们也许会再一次迎来必须拼命缔造属于我们自己的神话的时代。</p>
+</blockquote>
+<h2 id="◆-我与阿拉斯加的邂逅"><a href="#◆-我与阿拉斯加的邂逅" class="headerlink" title="◆ 我与阿拉斯加的邂逅"></a>◆ 我与阿拉斯加的邂逅</h2><blockquote>
+<p>书架上有那么多欧美书，我的视线怎么就偏偏停在了那本书上呢？它就出现在我眼前，仿佛它一直在等待我的到来似的。</p>
+</blockquote>
+<blockquote>
+<p>书里有一张让我魂牵梦绕的照片。每次拿起书本，我都要翻开那一页瞧一瞧，否则就浑身不舒服。那是张航拍的逆光照片，作品的主角是北极圈一座小小的爱斯基摩村庄。<br>灰色的白令海，阴沉的天空，穿过云层的阳光好似竹帘，还有那座孤零零的爱斯基摩村庄……起初，吸引我的也许是照片的神秘感。可渐渐地，我便对村庄本身产生了兴趣。</p>
+</blockquote>
+<blockquote>
+<p>也许是“陌生人过着我所不了解的人生”的神奇使然。亦或许是“明明活在同一个时代，却永远无法与他们邂逅”的悲哀。</p>
+</blockquote>
+<blockquote>
+<p>通过这次旅行，我被人类生活的多样性彻底折服了。这一切，发生在我19岁的那个夏天。</p>
+</blockquote>
+<blockquote>
+<p>如果当年没在神田的旧书店拿起那本书，我就不会来到阿拉斯加了吗？不，不会的。更何况，一路追溯人生的重要节点，你就会发现人生不过是由无限多个偶然串联而成的，好似对照镜中的无数个倒影。</p>
+</blockquote>
+<h2 id="◆-利图亚湾"><a href="#◆-利图亚湾" class="headerlink" title="◆ 利图亚湾"></a>◆ 利图亚湾</h2><blockquote>
+<p>我也想看一看吉姆独自欣赏了22年的风景。虽然我们生在了不同的时代，却都是为了寻求某些东西来到阿拉斯加的人，所以我也想碰触一下这位同路人的一生。此行的目的不过如此。</p>
+</blockquote>
+<blockquote>
+<p>每个人都有自己的故事，都只能走过各自的人生。但我唯一确定的是，当他划着小船，驶入这片天涯海角般的海湾时，利图亚湾的天气一定是晴朗的。就跟今天一样，是个无限宁静祥和的日子。</p>
+</blockquote>
+<h2 id="◆-基斯卡岛"><a href="#◆-基斯卡岛" class="headerlink" title="◆ 基斯卡岛"></a>◆ 基斯卡岛</h2><blockquote>
+<p>在没有亲身经历过那个时代的人看来，那些事不过是昭和史的一页，是没有生命力的知识。任我们如何接近那段历史，都不可能与亲历者同日而语。</p>
+</blockquote>
+<blockquote>
+<p>“如今，我终于明白人们为什么会创造出追忆往昔、让逝者永远存在的信仰。因为人心无法接受，也决不愿意承认，一条鲜活的生命，一个你深爱着、依赖着的人不复存在了。”</p>
+</blockquote>
+<h2 id="◆-无人区飞行员之死"><a href="#◆-无人区飞行员之死" class="headerlink" title="◆ 无人区飞行员之死"></a>◆ 无人区飞行员之死</h2><blockquote>
+<p>自远古时代未曾改变的驯鹿大迁徙、在夏日的苔原盛开的小花、穿越原野的风，还有“生命皆有终点”的法则……</p>
+</blockquote>
+<blockquote>
+<p>诗的标题是“热爱午餐肉的男人”。午餐肉（SPAM）是一种廉价的火腿罐头，在美国经常被用作“糟透了的食物”的代名词。可罗杰偏偏爱极了午餐肉。会场更是笑声四起。而且每个人都是一边笑，一边哭。<br>下一个环节是逐一分享与罗杰的回忆。明明没有提前商量好顺序，可一个人说完之后，自会有另一个人接上，整个过程自然极了。</p>
+</blockquote>
+<blockquote>
+<p>今年的黄叶真是太美了。年年都是同样的秋天，可它的色彩怎会年年都略有不同呢？</p>
+</blockquote>
+<h2 id="◆-旅行之木"><a href="#◆-旅行之木" class="headerlink" title="◆ 旅行之木"></a>◆ 旅行之木</h2><blockquote>
+<p>一棵云杉树的漫长旅行，在原野民宅的火炉中画上句号，但是云杉在燃尽后的大气中脱胎换骨，开启新的旅程……整本书散发出的远北气息，不知为我对阿拉斯加大自然的憧憬添了几多柴火。</p>
+</blockquote>
+<h2 id="◆-十六岁时"><a href="#◆-十六岁时" class="headerlink" title="◆ 十六岁时"></a>◆ 十六岁时</h2><blockquote>
+<p>我只想冲破包裹着日常生活的那一层宛若糯米纸的皮膜，亲手碰触名为“世界”的东西。</p>
+</blockquote>
+<blockquote>
+<p>一连好几天都只能看到大海，让我渐渐觉得自己长久以来居住的陆地仿佛只是不稳定的暂居地，而大海才是地球的实体。大海给了我无限的想象力，同时悄悄地告诉我，人的一辈子是多么短暂。</p>
+</blockquote>
+<blockquote>
+<p>独自远行，带来了与危险背靠背的刺激，也为我源源不断地提供了与许许多多人的邂逅。每一天的决定，都引出了全新的经历，让我置身于没有剧本的故事中。那是何等的不可思议啊。错过一班大巴，等待着自己的便是截然不同的体验。所谓人生，所谓邂逅，说到底大概就是这么回事，却是旅行将它们的本质清清楚楚地摆在了我的眼前。</p>
+</blockquote>
+<h2 id="◆-生活在阿拉斯加"><a href="#◆-生活在阿拉斯加" class="headerlink" title="◆ 生活在阿拉斯加"></a>◆ 生活在阿拉斯加</h2><blockquote>
+<p>因为在阿拉斯加，人们几乎对外表、头衔之类的东西毫无兴趣。但是对一个人褪去衣衫的真性情，大家又会表现出孩童般的好奇心。</p>
+</blockquote>
+<h2 id="◆-与生俱来的洪流"><a href="#◆-与生俱来的洪流" class="headerlink" title="◆ 与生俱来的洪流"></a>◆ 与生俱来的洪流</h2><blockquote>
+<p>他在“奔七”的年纪学起了日语。记住600多个汉字以后，还去了趟日本，从北海道一路骑行到九州，直与20多岁的学生无异。他在旅行途中遇到的日本人肯定对这位自由如风的老者叹为观止。</p>
+</blockquote>
+<blockquote>
+<p>每个人刚开始的时候都是这么过日子的。只是大家都在还很年轻的时候就早早地抛弃了这股洪流，想方设法要上岸</p>
+</blockquote>
+<blockquote>
+<p>老去的深度，也许就在于你在人生中面临过多少岔路口，又是如何小心翼翼地怀揣着形形色色的悲伤一路走来的。</p>
+</blockquote>
+<blockquote>
+<p>即使明天是世界末日，我也要种下我的苹果树￼。比尔的存在，总能让我深思肯定人生的意义。</p>
+</blockquote>
+<h2 id="◆-驯鹿汤"><a href="#◆-驯鹿汤" class="headerlink" title="◆ 驯鹿汤"></a>◆ 驯鹿汤</h2><blockquote>
+<p>然而，狩猎生活包含的偶然性也在人们心中构筑起了某种精神世界。精神世界的中心思想能用一句话概括，那就是“我们的生存离不开大自然的恩泽”。向鲸鱼发射渔叉的时候，在森林中偶遇驼鹿的时候，人们应该都在内心深处怀揣着这样的念想吧。</p>
+</blockquote>
+<blockquote>
+<p>“为了延续自己的生命，我要牺牲谁？”——生存其实就是针对这个问题做出的选择，日复一日，无穷无尽。因为生命体的本质，就在于“杀死并吃掉他者”。在现代社会中，我们很难看清这条规则，而狩猎民族却必须以最直接的形式去面对这一本质。上面这句话里的“规则”，也可以替换成“血腥味”或“悲哀”。而这种悲哀孕育出来的东西，正是源自古代的神话啊。</p>
+</blockquote>
+<h2 id="◆-海狸的子民"><a href="#◆-海狸的子民" class="headerlink" title="◆ 海狸的子民"></a>◆ 海狸的子民</h2><blockquote>
+<p>自然与人类世界毫无干系，只服务于自己的存在。阿拉斯加所独有的“毫无意义的宽广”一直让我心醉神迷。</p>
+</blockquote>
+<blockquote>
+<p>那么他们的历史也会在某个时间节点构筑起跟今日的我们一样的现代文明吗？难道不断变化真是人类生活的宿命，只是速度各不相同而已吗？</p>
+</blockquote>
+<blockquote>
+<p>“……所有的物质都是化石，所遇的过去都不是仅此一回的过去。在风包裹身体的那一刻，你大可告诉自己，那是古老的故事吹来了。因为风才是柔软得教人难以置信，却又货真价实的化石啊……”</p>
+</blockquote>
+<h2 id="◆-一家人的旅程"><a href="#◆-一家人的旅程" class="headerlink" title="◆ 一家人的旅程"></a>◆ 一家人的旅程</h2><blockquote>
+<p>我们并不是活在用日历和时钟的指针篆刻的时间里，而是活在某种更模糊、更脆弱的时间里，活在各自的生命时间里。“自己能用的时间是有限的”——当我们真正理解这件事的时候，它便蕴藏着转化为推动我们前行的巨大能量的无限可能。</p>
+</blockquote>
+<h2 id="◆-爱斯基摩奥运会"><a href="#◆-爱斯基摩奥运会" class="headerlink" title="◆ 爱斯基摩奥运会"></a>◆ 爱斯基摩奥运会</h2><blockquote>
+<p>“It made my day”——在英语中，这个说法的意思是“一件微不足道的小事让人满怀期许，让这一天都过得心满意足”。</p>
+</blockquote>
+<p>2023&#x2F;06&#x2F;21发表想法<br>🐢神里绫华参上</p>
+<blockquote>
+<p>“道夫，这支舞是献给你的！”</p>
+</blockquote>
+<h2 id="◆-锡特卡"><a href="#◆-锡特卡" class="headerlink" title="◆ 锡特卡"></a>◆ 锡特卡</h2><blockquote>
+<p>“有人说过，世上只有两种人。一种是过着奇妙而有趣的人生的人，另一种则是你还没见过的人……也就是说，在这个世界上，没有比每个人的一辈子更耐人寻味的了吧……”</p>
+</blockquote>
+<h2 id="◆-万烟谷"><a href="#◆-万烟谷" class="headerlink" title="◆ 万烟谷"></a>◆ 万烟谷</h2><blockquote>
+<p>痛苦的记忆也在名为岁月的万华镜中不知不觉便成了让人怀念的回忆。</p>
+</blockquote>
+<blockquote>
+<p>自然也好，人的生活也罢，我们寻寻觅觅的都是能照出自己模样的镜子。而且那必须是一面让人怦然心动，又透彻明净的镜子……</p>
+</blockquote>
+<h2 id="◆-勿忘我"><a href="#◆-勿忘我" class="headerlink" title="◆ 勿忘我"></a>◆ 勿忘我</h2><blockquote>
+<p>且不论原因为何，从下定决心扎根于这片土地的那一刻起，我周围的风景的的确确出现了变化。不，风景明明是一样的，但对于自然和人们的生活都能看得更透彻了，仿佛是有人取下了夹在中间的磨砂玻璃。</p>
+</blockquote>
+<blockquote>
+<p>也许在做出那个决定之前，无论我再怎么深入阿拉斯加的腹地，都不过是一个欣赏出色电影的观众而已。</p>
+</blockquote>
+<blockquote>
+<p>她特别爱花，一起外出拍摄时，我们也邂逅了许许多多远北的花朵。那些娇小可爱却顽强盛放在阿拉斯加原野上的野花完完全全俘虏了她的心。</p>
+</blockquote>
+<p>2023&#x2F;06&#x2F;22发表想法<br>听起来很像古希腊悲剧</p>
+<blockquote>
+<p>如果这片土地没有冬天，一年到头都有看不尽的鲜花争奇斗艳，人们对花儿的感情定不会如此强烈。</p>
+</blockquote>
+<blockquote>
+<p>如果这片土地没有冬天，一年到头都有看不尽的鲜花争奇斗艳，人们对花儿的感情定不会如此强烈。</p>
+</blockquote>
+<blockquote>
+<p>盛开在严苛环境中的花朵有着独具一格的美，和温暖和煦、阳光普照的南国世界的花截然不同。</p>
+</blockquote>
+<blockquote>
+<p>我觉得随风摇摆的勿忘我也在向我们诉说，我们不能活在过去，也无法活在未来，只能活在当下。</p>
+</blockquote>
+<blockquote>
+<p>而且到头来，有意义的并不是结果，而是我们度过的那些无可替代的时间。</p>
+</blockquote>
+<blockquote>
+<p>我想珍惜那些不会催生出任何东西，只是白白流淌的时光。我想时时刻刻在内心的某个角落感觉到与匆忙的人类日常生活同步流动的另一种时间。</p>
+</blockquote>
+
+  </div>
+  <div id="gitalk-container"></div>
+</div>
+
+<script>
+  
+Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
+  dragToClose: true,
+  Toolbar: true,
+  closeButton: "top",
+  Image: {
+    zoom: true,
+  },
+  on: {
+    initCarousel: (fancybox) => {
+      const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+    "Carousel.change": (fancybox, carousel, to, from) => {
+      const slide = carousel.slides[to];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+  },
+});
+</script>
+
+<style>
+    #noneimg img {
+        display: none;
+        z-index: 9999;
+        /* width: 600px !important; */
+        min-width: 0%;
+        max-width: 90%;
+        max-height: 80%;
+        border-radius: 0px;
+        position: fixed;
+        box-shadow: 0 0 0px #c3c3c300 !important;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto !important;
+    }
+
+    @media screen and (max-width:600px) {
+        #noneimg img {
+            max-width: 88%
+        }
+    }
+</style>
+
+    <div class="post-paging">
+    
+    <a href="/2023/books/%E3%80%8A%E6%97%A5%E6%9C%AC%E4%B9%8B%E9%95%9C%EF%BC%9A%E6%97%A5%E6%9C%AC%E6%96%87%E5%8C%96%E4%B8%AD%E7%9A%84%E8%8B%B1%E9%9B%84%E4%B8%8E%E6%81%B6%E4%BA%BA%E3%80%8B/">
+        <div class="post-paging-last">
+            <span>上一篇</span>
+            <p>《日本之镜：日本文化中的英雄与恶人》笔记摘抄</p>
+        </div>
+    </a>
+    
+
+    
+    <a href="/2023/books/%E3%80%8A%E5%A6%82%E4%BD%95%E5%9C%A8%E8%87%AA%E5%B7%B1%E6%84%9F%E5%85%B4%E8%B6%A3%E7%9A%84%E9%A2%86%E5%9F%9F%E5%87%BA%E7%B1%BB%E6%8B%94%E8%90%83%EF%BC%9A%E7%90%86%E6%83%B3%E4%BA%BA%E7%94%9F%E5%AE%9E%E7%8E%B0%E6%8C%87%E5%8D%97%E3%80%8B/">
+        <div class="post-paging-next">
+            <span>下一篇</span>
+            <p>《如何在自己感兴趣的领域出类拔萃：理想人生实现指南》笔记摘抄</p>
+        </div>
+    </a>
+    
+</div>
+</div>
+		
+<div class="footer">
+	<div class="Copyright">
+		©2025 By 可能是水桶吧 <br>备案信息：<a
+			style="text-decoration: none;display: contents; color: #90defd;"
+			target="_blank" rel="noopener" href="http://beian.miit.gov.cn">ICP-123456</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://visnz.zcool.com.cn/">
+			<img src="/assets/website/zcool-icon2.png" alt="Quiet主题">
+		</a>
+		
+		<a target="_blank" rel="noopener" href="https://www.xiaohongshu.com/user/profile/599e99f650c4b40fb927384f">
+			<img src="/assets/website/xhs-icon.png" alt="Quiet主题">
+		</a>
+		
+		<a target="_blank" rel="noopener" href="https://space.bilibili.com/20477830">
+			<img src="/assets/website/bilibili-icon.png" alt="Quiet主题">
+		</a>
+		
+		<a href="/assets/blog/about/QQ_QRCode.jpg">
+			<img src="/assets/website/QQ-icon.png" alt="Quiet主题">
+		</a>
+		
+	</div>
+	</div>
+</div>
+
+<script src="/js/gotop.js"></script>
+
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            transition: border .5s;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .goTop {
+            display: none;
+        }
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $( '#js-go_top' )
+	.gotoTop( {
+		offset: 500,
+		speed: 300,
+		animationShow: {
+			'transform': 'translate(0,0)',
+			'transition': 'transform .5s ease-in-out'
+		},
+		animationHide: {
+			'transform': 'translate(100px,0)',
+			'transition': 'transform .5s ease-in-out'
+		}
+	} );
+</script>
+	</body>
+</html>
+

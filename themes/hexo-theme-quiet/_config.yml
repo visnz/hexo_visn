@@ -1,7 +1,7 @@
 # 网站标题
 title: 水桶的小屋
 # 网站标题后缀
-suffix: //.Backup
+suffix: .Backup
 # 作者名称
 author: 可能是水桶吧
 # 网站关键字
@@ -15,14 +15,16 @@ home_layout: card
 # 导航名称
 menus_title:
   home: 封面
+  fav: 精选
   categories: 分栏
   tags: 标记
   archive: 时间线
-  links: 工具
+  links: 外链
   about: 关于我
 # 导航 （不建议修改）
 menus:
   home: /
+  fav: /tags/累进式笔记
   categories: /categories
   tags: /tags
   archive: /archives
@@ -49,17 +51,13 @@ headers:
       icon: "/assets/website/tag.png"
     }
     links: {
-      message: "我和我的小伙伴们",
-      icon: "https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imga20r7-cftji.svg"
+      message: "一些流淌的痕迹",
+      icon: "/assets/website/project.png"
     }
     categories: {
       message: "无聊时的方向",
       icon: "/assets/website/category.png"
     }
-    # projects: {
-    #   message: "一些小小尝试",
-    #   icon: "/assets/website/category.png"
-    # }
 # 网页访问统计
 # web_analytics:  
 #   enable: false #需要改为true
@@ -75,6 +73,14 @@ headers:
 # 底部显示的图标（github 或者其他）
 bottomIcon: 
   #可以多个
+  - {
+    #描述名称
+    name: 'Zcool',
+    #图标    
+    iconLink: '/assets/website/zcool-icon2.png',
+    #跳转链接    
+    toUrl: 'https://visnz.zcool.com.cn/'
+  }
   - {
     #描述名称
     name: '小红书',
@@ -102,25 +108,30 @@ bottomIcon:
 # 友情链接
 linksList:
   - {
-    title: 'Quiet',
-    intro: '收藏回忆与分享技术的地方',
-    link: 'https://github.com/79E/hexo-theme-quiet',
-    image: 'https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgIMG_7327.jpeg'
+    title: 'Blender插件：快照',
+    intro: '含文件快访/小工具箱',
+    link: 'https://github.com/visnz/Snapshot_3d_viewer',
+    image: '/assets/website/blender.png'
   }
   - {
-    title: 'Quiet',
-    intro: '收藏回忆与分享技术的地方',
-    link: 'https://github.com/79E/hexo-theme-quiet',
-    image: 'https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgIMG_7327.jpeg'
+    title: '随机词汇生成器',
+    intro: '抽象工具',
+    link: 'https://github.com/visnz/RandomWordsGen',
+    image: '/assets/website/python.png'
   }
   - {
-    title: 'Quiet',
-    intro: '收藏回忆与分享技术的地方',
-    link: 'https://github.com/79E/hexo-theme-quiet',
-    image: 'https://cdn.jsdelivr.net/gh/duogongneng/MyBlogImg/imgIMG_7327.jpeg'
+    title: '屏幕定时截图',
+    intro: '用截图替代录屏',
+    link: 'https://github.com/visnz/screenshot-sh',
+    image: '/assets/website/python.png'
   }
 
 #默认的cover (默认缩略图) 在没有填写（这里可以替换（可以是api也可以是固定的图））
 # https://api.ixiaowai.cn/gqapi/gqapi.php
 # https://tuapi.eees.cc/api.php?type=302&category=fengjing
 default_cover: /assets/blog/about/d.webp.jpg #/assets/blog/2024/OSLnote/title.png
+# categories:
+#   CG通用相关: '/assets/categories/CG通用相关.png'
+#   读书笔记: '/assets/categories/读书笔记.png'
+#   工具与其他: '/assets/categories/工具与其他.png'
+#   年终回顾: '/assets/categories/年终回顾.png'

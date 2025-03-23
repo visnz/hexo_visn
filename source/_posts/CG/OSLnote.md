@@ -9,9 +9,7 @@ tags:
     - CG相关
     - TA
     - OctaneRender
-describe: ''
 categories: "CG通用相关"
-comments: false
 ---
 
 使用OctaneRender探索了一下OSL摄像机
@@ -86,5 +84,71 @@ shader disp(
 {
     point p = P+displacer*snoise(dispFreq*freq*P);
     c = amount*(snoise(freq*p));
+}
+```
+
+# 高斯模糊
+此代码为OC官方内置公开的代码，搬运保留，以便使用
+```c
+// 输入端口1为贴图（需要将投射方式改为OSL投射或OSL延迟UV）
+// 输入端口2为重复次数，0~10
+// 输入端口3为重复范围，以uv计算。0.01即为1%的范围。
+//
+// 题外话：主要是有OSL延迟UV（_evaluateDelayed这个函数）使得各种贴图处理都要简单一些
+// Blender之中使用节点复刻高斯模糊，处理思路也跟这个差不多
+
+#include <octane-oslintrin.h>
+
+#define MAX_ITERATIONS  10
+#define MAX_KERNEL_SIZE 11 // MAX_ITERATIONS + 1
+
+// OSL sample implementation of gaussian blur for Octane Render
+shader GaussianBlur(
+    color in = 0
+        [[string label = "Input texture"]],
+    int iterations = 5
+        [[int min = 0, int max = MAX_ITERATIONS,
+          string label = "Step count",
+          string description = "Number of steps"]],
+    float stepSize = 0.001
+        [[float min = 0.00001, float max = 0.01,
+          string label = "Step size",
+          string description = "UV distance between steps"]],
+    output color out = 0)
+{
+    if (iterations == 0)
+    {
+        // just return the input with the right UV mapping
+        out =  _evaluateDelayed(in, u, v);
+    }
+    else
+    {
+        float kernel[MAX_KERNEL_SIZE];
+
+        // initialize the kernel
+        float normFactor = 0;
+        for (int i = 0; i <= iterations; ++i)
+        {
+            // use normal probability density function with sigma = 7
+            float n  = 0.05699175 * exp(-0.01020408 * i * i);
+            normFactor += i == 0 ? n : 2*n;
+            kernel[i] = n;
+        }
+
+        // average the neighbours
+        color c  = 0;
+        for (int i = -iterations; i <= iterations; ++i)
+        {
+            float n = kernel[iterations - abs(i)];
+            for (int j = -iterations; j <= iterations; ++j)
+            {
+                float f = n * kernel[iterations - abs(j)];
+                c += f * _evaluateDelayed(in, u + i * stepSize, v + j * stepSize);
+            }
+        }
+
+        // calculate the final value
+        out = c/(normFactor*normFactor);
+    }
 }
 ```

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		
-<title>OSL笔记-//.Backup</title>
+<title>OSL笔记-.Backup</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -60,6 +60,15 @@
 									
 						
 								<li>
+									<a href="/tags/累进式笔记">
+										精选
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
 									<a href="/categories">
 										分栏
 									</a>
@@ -88,7 +97,7 @@
 						
 								<li>
 									<a href="/links">
-										工具
+										外链
 									</a>
 									<span class="dot"></span>
 								</li>
@@ -124,6 +133,10 @@
         </li>
         
         <li>
+            <a href="/tags/累进式笔记">精选</a>
+        </li>
+        
+        <li>
             <a href="/categories">分栏</a>
         </li>
         
@@ -136,7 +149,7 @@
         </li>
         
         <li>
-            <a href="/links">工具</a>
+            <a href="/links">外链</a>
         </li>
         
         <li>
@@ -145,6 +158,10 @@
         
     </ul>
     <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://visnz.zcool.com.cn/">
+            <img src="/assets/website/zcool-icon2.png" alt="Quiet主题">
+        </a>
         
         <a target="_blank" rel="noopener" href="https://www.xiaohongshu.com/user/profile/599e99f650c4b40fb927384f">
             <img src="/assets/website/xhs-icon.png" alt="Quiet主题">
@@ -317,7 +334,7 @@
                 <span class="post-header-info-author-text"> <a href="/index.html">可能是水桶吧</a></span>
                 <div class="post-header-info-author-categories">
                     
-                         <a href="../../categories/CG通用相关/" target="_blank" >CG通用相关</a>
+                         <a href="/categories/CG通用相关/" target="_blank" >CG通用相关</a>
                     
                 </div>
                 <p>2024-04-01 20:33:36</p>
@@ -341,8 +358,11 @@
 <p>相比目前新版本的OC自带的鱼眼摄像头，感觉这个OSL的范围和畸变比官方自带的更真实一些</p>
 <h1 id="OSL-云置换"><a href="#OSL-云置换" class="headerlink" title="OSL 云置换"></a>OSL 云置换</h1><p>blender中直接由修改器的displace完成，C4D中oc的vol对象只能通过这个OSL接口输入完成修改</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line">shader <span class="title function_">disp</span><span class="params">(</span></span><br><span class="line"><span class="params">    <span class="type">float</span> amount=<span class="number">5</span>[[<span class="type">float</span> slidermin=<span class="number">0</span>, <span class="type">float</span> slidermax=<span class="number">10</span>, <span class="type">float</span> min=<span class="number">0</span>]],</span></span><br><span class="line"><span class="params">    <span class="type">float</span> freq=<span class="number">1</span>[[<span class="type">float</span> slidermin=<span class="number">0</span>, <span class="type">float</span> slidermax=<span class="number">10</span>]],</span></span><br><span class="line"><span class="params">    <span class="type">float</span> displacer=<span class="number">0.5</span>[[<span class="type">float</span> slidermin=<span class="number">0</span>, <span class="type">float</span> slidermax=<span class="number">1</span>, <span class="type">float</span> min=<span class="number">0</span>]],</span></span><br><span class="line"><span class="params">    <span class="type">float</span> dispFreq=<span class="number">3</span>[[<span class="type">float</span> slidermin=<span class="number">0</span>, <span class="type">float</span> slidermax=<span class="number">10</span>]],</span></span><br><span class="line"><span class="params">    output color c = <span class="number">0</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    point p = P+displacer*snoise(dispFreq*freq*P);</span><br><span class="line">    c = amount*(snoise(freq*p));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="高斯模糊"><a href="#高斯模糊" class="headerlink" title="高斯模糊"></a>高斯模糊</h1><p>此代码为OC官方内置公开的代码，搬运保留，以便使用</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 输入端口1为贴图（需要将投射方式改为OSL投射或OSL延迟UV）</span></span><br><span class="line"><span class="comment">// 输入端口2为重复次数，0~10</span></span><br><span class="line"><span class="comment">// 输入端口3为重复范围，以uv计算。0.01即为1%的范围。</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// 题外话：主要是有OSL延迟UV（_evaluateDelayed这个函数）使得各种贴图处理都要简单一些</span></span><br><span class="line"><span class="comment">// Blender之中使用节点复刻高斯模糊，处理思路也跟这个差不多</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;octane-oslintrin.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAX_ITERATIONS  10</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAX_KERNEL_SIZE 11 <span class="comment">// MAX_ITERATIONS + 1</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// OSL sample implementation of gaussian blur for Octane Render</span></span><br><span class="line">shader <span class="title function_">GaussianBlur</span><span class="params">(</span></span><br><span class="line"><span class="params">    color in = <span class="number">0</span></span></span><br><span class="line"><span class="params">        [[<span class="built_in">string</span> label = <span class="string">&quot;Input texture&quot;</span>]],</span></span><br><span class="line"><span class="params">    <span class="type">int</span> iterations = <span class="number">5</span></span></span><br><span class="line"><span class="params">        [[<span class="type">int</span> min = <span class="number">0</span>, <span class="type">int</span> max = MAX_ITERATIONS,</span></span><br><span class="line"><span class="params">          <span class="built_in">string</span> label = <span class="string">&quot;Step count&quot;</span>,</span></span><br><span class="line"><span class="params">          <span class="built_in">string</span> description = <span class="string">&quot;Number of steps&quot;</span>]],</span></span><br><span class="line"><span class="params">    <span class="type">float</span> stepSize = <span class="number">0.001</span></span></span><br><span class="line"><span class="params">        [[<span class="type">float</span> min = <span class="number">0.00001</span>, <span class="type">float</span> max = <span class="number">0.01</span>,</span></span><br><span class="line"><span class="params">          <span class="built_in">string</span> label = <span class="string">&quot;Step size&quot;</span>,</span></span><br><span class="line"><span class="params">          <span class="built_in">string</span> description = <span class="string">&quot;UV distance between steps&quot;</span>]],</span></span><br><span class="line"><span class="params">    output color out = <span class="number">0</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (iterations == <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// just return the input with the right UV mapping</span></span><br><span class="line">        out =  _evaluateDelayed(in, u, v);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">float</span> kernel[MAX_KERNEL_SIZE];</span><br><span class="line"></span><br><span class="line">        <span class="comment">// initialize the kernel</span></span><br><span class="line">        <span class="type">float</span> normFactor = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt;= iterations; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// use normal probability density function with sigma = 7</span></span><br><span class="line">            <span class="type">float</span> n  = <span class="number">0.05699175</span> * <span class="built_in">exp</span>(<span class="number">-0.01020408</span> * i * i);</span><br><span class="line">            normFactor += i == <span class="number">0</span> ? n : <span class="number">2</span>*n;</span><br><span class="line">            kernel[i] = n;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// average the neighbours</span></span><br><span class="line">        color c  = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = -iterations; i &lt;= iterations; ++i)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">float</span> n = kernel[iterations - <span class="built_in">abs</span>(i)];</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = -iterations; j &lt;= iterations; ++j)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="type">float</span> f = n * kernel[iterations - <span class="built_in">abs</span>(j)];</span><br><span class="line">                c += f * _evaluateDelayed(in, u + i * stepSize, v + j * stepSize);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// calculate the final value</span></span><br><span class="line">        out = c/(normFactor*normFactor);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
   </div>
-  <div id=""></div>
+  <div id="gitalk-container"></div>
 </div>
 
 <script>
@@ -400,6 +420,13 @@ Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
 
     <div class="post-paging">
     
+    <a href="/2024/CG/Render/OC_LightingToolsGradient/">
+        <div class="post-paging-last">
+            <span>上一篇</span>
+            <p>OC光学工具：屏幕空间渐变实现裁切+屏幕空间光</p>
+        </div>
+    </a>
+    
 
     
     <a href="/2024/CG/Comp/AE_HSV/">
@@ -419,6 +446,10 @@ Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
 			target="_blank" rel="noopener" href="http://beian.miit.gov.cn">ICP-123456</a>
 	</div>
 	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://visnz.zcool.com.cn/">
+			<img src="/assets/website/zcool-icon2.png" alt="Quiet主题">
+		</a>
 		
 		<a target="_blank" rel="noopener" href="https://www.xiaohongshu.com/user/profile/599e99f650c4b40fb927384f">
 			<img src="/assets/website/xhs-icon.png" alt="Quiet主题">

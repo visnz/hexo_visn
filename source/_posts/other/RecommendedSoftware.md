@@ -1,6 +1,6 @@
 ---
 title: 个人Windows的工具软件推荐与体验优化
-date: 2020-01-02 08:53:16
+date: 0000-00-00 00:00:00
 aubot: 可能是水桶吧
 aubot_link: '/index.html'
 cover: '/assets/blog/other/RecommendedSoftware.png'
@@ -8,7 +8,6 @@ tags:
     - 累进式笔记
 describe: ''
 categories: "工具与其他"
-comments: false
 ---
 ## 个人Windows软件简记
 1.  Twinkle Tray：非硬件层面调节屏幕亮度的工具

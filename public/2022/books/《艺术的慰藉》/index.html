@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+<title>《艺术的慰藉》笔记摘抄-.Backup</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/assets/blog/about/d.webp.jpg">
+
+<link rel="stylesheet" href="/css/index.css">
+
+
+<meta name="keywords" content="技术,美术,Blender,C4D,AE">
+<meta name="description" content="一些自己存在过的记录">
+
+
+<script src="/js/jquery.min.js"></script>
+
+
+<script src="/js/index.js"></script>
+
+
+<script src="/js/fancybox.umd.js"></script>
+
+
+<script src="/js/fancybox-images.js"></script>
+
+
+<script src="/js/gitalk.min.js"></script>
+
+<!-- 
+<script src="/js/hljs.min.js"></script>
+  -->
+<!-- <script>hljs.highlightAll();</script> -->
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		
+	<div class="header">
+		<div class="header-top" id="header-top">
+			<div class="h-left">
+				<a href="/">
+					<img src="/assets/blog/about/d.webp.jpg" alt="Quiet">
+				</a>
+			</div>
+			<div class="h-right">
+				<ul>
+					
+						
+								<li>
+									<a href="/">
+										封面
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/tags/累进式笔记">
+										精选
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/categories">
+										分栏
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/tags">
+										标记
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/archives">
+										时间线
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/links">
+										外链
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+						
+								<li>
+									<a href="/about">
+										关于我
+									</a>
+									<span class="dot"></span>
+								</li>
+								
+									
+				</ul>
+			</div>
+			<div class="h-right-close">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+					<path fill="none" d="M0 0h24v24H0z" />
+					<path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(68,68,68,1)" />
+				</svg>
+			</div>
+		</div>
+	</div>
+	<div class="sidebar">
+    <div class="topo">
+        <h2>可能是水桶吧</h2>
+    </div>
+    <ul>
+        
+        <li>
+            <a href="/">封面</a>
+        </li>
+        
+        <li>
+            <a href="/tags/累进式笔记">精选</a>
+        </li>
+        
+        <li>
+            <a href="/categories">分栏</a>
+        </li>
+        
+        <li>
+            <a href="/tags">标记</a>
+        </li>
+        
+        <li>
+            <a href="/archives">时间线</a>
+        </li>
+        
+        <li>
+            <a href="/links">外链</a>
+        </li>
+        
+        <li>
+            <a href="/about">关于我</a>
+        </li>
+        
+    </ul>
+    <div class="my_foot">
+        
+        <a target="_blank" rel="noopener" href="https://visnz.zcool.com.cn/">
+            <img src="/assets/website/zcool-icon2.png" alt="Quiet主题">
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://www.xiaohongshu.com/user/profile/599e99f650c4b40fb927384f">
+            <img src="/assets/website/xhs-icon.png" alt="Quiet主题">
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://space.bilibili.com/20477830">
+            <img src="/assets/website/bilibili-icon.png" alt="Quiet主题">
+        </a>
+        
+        <a href="/assets/blog/about/QQ_QRCode.jpg">
+            <img src="/assets/website/QQ-icon.png" alt="Quiet主题">
+        </a>
+        
+    </div>
+</div>
+<div class='shelter'>
+</div>
+<style>
+    .shelter{
+        background-color: #333;
+        opacity:0.5;
+        cursor: pointer;
+        display: none; 
+        position: fixed;
+        left: 0;
+        top: 0; 
+        right: 0;
+        bottom: 0;
+        z-index: 1998;
+    }
+    .sidebar {
+        width: 66%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        bottom: 0;
+        background: #fff;
+        z-index: 1999;
+        text-align: center;
+        box-shadow: -6px 0 20px rgba(98, 94, 94, .815);
+    }
+
+    .topo {
+        width: 100%;
+        height: 200px;
+        background: url(/assets/blog/about/d.webp.jpg) no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        display: flex;
+        align-items: flex-end
+    }
+
+    .topo h2 {
+        color: #fff;
+        z-index: 1;
+        position: relative;
+        margin: 0 0 10px 10px;
+        font-size: 1.2em;
+        box-sizing: border-box
+    }
+
+    .topo:before {
+        content: '';
+        background-image: url(/image/pattern.png);
+        background-repeat: repeat;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1
+    }
+
+    .sidebar ul {
+        width: 100%;
+        margin-top: 50px
+    }
+
+    .sidebar ul li {
+        height: 50px;
+        list-style: none;
+        font-size: 1.2em;
+        text-align: right;
+        margin-right: 10px
+    }
+
+    .sidebar ul li a {
+        display: grid;
+        color: #5d606a;
+        text-overflow: ellipsis;
+        width: 100%;
+        text-decoration: none
+    }
+
+    .my_foot {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        position: absolute;
+        bottom: 0
+    }
+
+    .my_foot a {
+        text-decoration: none;
+        margin-right: 10px;
+        display: inline-block
+    }
+
+    .my_foot a img {
+        width: 30px;
+        height: 30px
+    }
+</style>
+
+<script>
+    $( function () {
+	$( '.h-right-close>svg' )
+		.click( function () {
+			$( '.sidebar' )
+				.animate( {
+					right: "0"
+				}, 500 );
+			$( '.shelter' )
+				.fadeIn( "slow" )
+		} );
+	$( '.shelter' )
+		.click( function ( e ) {
+			$( '.sidebar' )
+				.animate( {
+					right: "-100%"
+				}, 500 );
+			$( '.shelter' )
+				.fadeOut( "slow" )
+		} )
+} )
+
+</script>
+
+<div class="post">
+    <div class="post-header-background post-header-img"
+    style="background: url('/assets/blog/about/d.webp.jpg');background-repeat:no-repeat;background-position:top;" 
+>
+    <div class="post-header-background-content">
+        <ul class="post-header-tag">
+            
+        </ul>
+        
+        <h1>《艺术的慰藉》笔记摘抄</h1>
+        <div class="post-header-info">
+            <div class="post-header-info-author">
+                
+                    <svg t="1604839279282" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="2901" width="20" height="20">
+                        <path
+                            d="M513 956.3c-247.7 0-448-200.3-448-448S265.3 66.2 513 66.2s448 200.3 448 448-200.3 442.1-448 442.1z m0-830.9c-212.2 0-388.8 170.7-388.8 388.8C124.2 726.3 294.9 903 513 903c212.2 0 388.8-170.7 388.8-388.8S725.2 125.4 513 125.4z m0 430.2c-94.2 0-170.7-76.5-170.7-170.7S418.8 207.8 513 207.8s170.7 76.5 170.7 170.7S607.2 555.6 513 555.6z m0-289.1c-64.6 0-112 52.8-112 112s47.4 117.9 112 117.9 112-52.8 112-112-47.4-117.9-112-117.9z m0 689.8c-135.7 0-259-58.7-341.9-158.9l-11.8-17.8 11.8-17.8c76.5-117.9 206.2-188.5 347.8-188.5 135.7 0 265 64.6 341.9 182.6l11.8 17.8-11.8 17.8C778 897.1 648.7 956.3 513 956.3zM230.3 773.2C300.9 849.7 406.9 897 513 897c112 0 218.1-47.4 288.6-129.8-70.5-88.2-170.7-135.6-282.7-135.6s-218.1 53.3-288.6 141.6z"
+                            p-id="2902" fill="#ffffff"></path>
+                    </svg>
+                    
+                <span class="post-header-info-author-text"> <a href="/index.html">可能是水桶吧</a></span>
+                <div class="post-header-info-author-categories">
+                    
+                         <a href="/categories/读书笔记/" target="_blank" >读书笔记</a>
+                    
+                </div>
+                <p>2022-02-19 00:00:00</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="post-content" id="content">
+  
+  <div id="article" class="post-content-info">
+    
+
+    <h1 id="《艺术的慰藉》"><a href="#《艺术的慰藉》" class="headerlink" title="《艺术的慰藉》"></a>《艺术的慰藉》</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
+<li><a href="#%E6%96%B9%E6%B3%95%E8%AE%BA">方法论</a><ul>
+<li><a href="#%E8%AE%B0%E5%BF%86">记忆</a></li>
+<li><a href="#%E5%B8%8C%E6%9C%9B">希望</a></li>
+<li><a href="#%E5%93%80%E6%84%81">哀愁</a></li>
+<li><a href="#%E9%87%8D%E8%8E%B7%E5%B9%B3%E8%A1%A1">重获平衡</a></li>
+<li><a href="#%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5">自我认知</a></li>
+<li><a href="#%E6%88%90%E9%95%BF">成长</a></li>
+<li><a href="#%E6%AC%A3%E8%B5%8F">欣赏</a></li>
+<li><a href="#%E5%A5%BD%E7%9A%84%E8%89%BA%E6%9C%AF%E4%BD%9C%E5%93%81">好的艺术作品</a><ul>
+<li><a href="#%E6%94%BF%E6%B2%BB%E8%A7%82%E7%82%B9">政治观点</a></li>
+<li><a href="#%E7%96%97%E6%84%88%E8%A7%82%E7%82%B9">疗愈观点</a></li>
+</ul>
+</li>
+<li><a href="#%E5%A6%82%E4%BD%95%E5%B1%95%E7%A4%BA">如何展示</a></li>
+</ul>
+</li>
+<li><a href="#%E7%88%B1">爱</a><ul>
+<li><a href="#%E6%88%90%E4%B8%BA%E5%87%BA%E8%89%B2%E7%9A%84%E7%88%B1%E4%BA%BA">成为出色的爱人</a></li>
+<li><a href="#%E6%B3%A8%E9%87%8D%E7%BB%86%E8%8A%82">注重细节</a></li>
+<li><a href="#%E8%80%90%E5%BF%83">耐心</a></li>
+<li><a href="#%E7%90%86%E6%80%A7">理性</a></li>
+</ul>
+</li>
+<li><a href="#%E8%87%AA%E7%84%B6">自然</a><ul>
+<li><a href="#%E9%93%AD%E8%AE%B0%E5%9C%A8%E5%BF%83%E7%9A%84%E8%87%AA%E7%84%B6">铭记在心的自然</a></li>
+</ul>
+</li>
+<li><a href="#%E9%87%91%E9%92%B1">金钱</a><ul>
+<li><a href="#%E5%93%81%E5%91%B3%E7%9A%84%E9%97%AE%E9%A2%98">品味的问题</a></li>
+<li><a href="#%E8%81%8C%E4%B8%9A%E5%BF%A0%E5%91%8A">职业忠告</a></li>
+</ul>
+</li>
+<li><a href="#%E6%94%BF%E6%B2%BB">政治</a><ul>
+<li><a href="#%E6%94%B9%E5%8F%98%E4%B8%96%E7%95%8C%E5%90%A7">改变世界吧</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>我们可能在参观过备受尊崇的美术馆和展览之后，觉得无甚感动，甚至心中充满困惑，仿佛少了些什么，纳问着自己原本期待的那种足以改变人生的体验为什么没有出现。在这种情况下，我们很容易会责怪自己，认定问题一定是自己的学识或感受能力不足。</p>
+</blockquote>
+<blockquote>
+<p>“为艺术而艺术”这句话尤其排斥了艺术可能具有任何特定用途的想法，因此导致艺术的崇高地位充满了神秘性，同时也脆弱不已。尽管欣赏艺术备受尊崇，其重要性却经常只存在于我们的假设当中，而没有得到解释。至于其价值，则是被视为众人皆知的常识。这点实在令人遗憾，不但对观众是如此，对艺术品的保管者而言也是一样。</p>
+</blockquote>
+<blockquote>
+<p>本书要提出这项论点：艺术（包抵设计、建筑与工艺方面的作品）一种具有疗愈性的媒介，能够协助引导、规诚以及抚慰艺术品的欣赏者，促使他们成为更好的人。</p>
+</blockquote>
+<blockquote>
+<p>工具是身体的延伸，可让我们实现自己的梦想，而且由于我们身体构造上的不足，工具因此成为必备的要素。我们需要切割，却缺乏这样的能力，所以必须用刀子满足这样的需求。我们需要携带水，却缺乏这样的能力，所以必须以瓶子满足这样的需求。为了发现艺术的目的，我们必须要问：有哪些事情是我们的心智与情感需要做却又做不到的？有哪些心理缺陷是艺术可以提供帮助的？</p>
+</blockquote>
+<h2 id="方法论"><a href="#方法论" class="headerlink" title="方法论"></a>方法论</h2><h3 id="记忆"><a href="#记忆" class="headerlink" title="记忆"></a>记忆</h3><blockquote>
+<p>艺术能够帮助我们达成在我们人生中具有核心重要性的一项任务：在我们心爱的对象离去之后，继续将他们留在我们心中</p>
+</blockquote>
+<blockquote>
+<p>我们之所以会想要拿起相机，在于我们怀有一个充满焦虑的自知之明，深知人类对手时间的流逝具有认知上的缺陷：我们终将遗忘泰姬玛哈陵、遗忘乡间的漫步，更重要的是，也终将不免遗忘那个七岁九个月大的孩子坐在客厅地毯上用乐高积木搭建房屋的模样。</p>
+</blockquote>
+<blockquote>
+<p>我们想要记住的是真正重要的事情，而我们之所以认为某些艺术家特别杰出，部分原因就是他们显然做出了正确的选择，把该纪念的东西记录了下来，并且排除了其他不重要的东西]</p>
+</blockquote>
+<blockquote>
+<p>抽劣的作品虽然也无疑能够为我们提醒过往的事物，却无法掌握其中的本质，而不免沦为一件空洞的纪念品。</p>
+</blockquote>
+<blockquote>
+<p>艺术是一种保存体验的方式。我们有许多稍纵即逝的美妙体验，都需要有人帮助留存下来。</p>
+</blockquote>
+<blockquote>
+<p>约翰•康斯太勃尔（JohnConstable）的《云朵习作》邀请我们投注比平常更多的心思在个别云朵的独特纹理与形状上，观看它们的色彩变化以及聚合在一起的模样。</p>
+</blockquote>
+<h3 id="希望"><a href="#希望" class="headerlink" title="希望"></a>希望</h3><blockquote>
+<p>在最基本的层面上，我们之所以喜欢赏心悦目的图画在于我们喜欢这些图画所代表的真实事物。莫奈(ClaudeMonet）喜欢画的那座水景花园本身就令人心旷神怡，而欣赏者愈是无法拥有这类作品中描绘的对象，愈是容易被这种作品吸引。在吵杂的都市华厦公寓里看见这样一幅复制画，让人能够神游于水畔一片宁静的露天花园中，绝对不会是令人意外的事情。</p>
+</blockquote>
+<blockquote>
+<p>对于赏心悦目的担优体现在两个方面。首先，一般认为赏心悦目的图画会促进人的柔情善感。柔情善感是一种症状，表示个人缺乏接触有深度的事物而所谓有深度的事物，其实指的就是问题。赏心悦目的图画似乎告诉着我们，要拥有美好的人生，只需借着一幅花卉图画装点公寓即可。</p>
+</blockquote>
+<blockquote>
+<p>第二，另一个相关的担忧，则是害怕赏心悦目会使人麻痹，令人对自身周遭的不公不义现象缺之批判性与警觉性。</p>
+</blockquote>
+<blockquote>
+<p>其中的担忧是，我们也许会太容易感到欢悦开心，从而对人生与世界采取一种过度乐观的观点。简而言之，我们内心将会充满毫不合理的希望。</p>
+</blockquote>
+<blockquote>
+<p>欢愉是一种成就，希望也是一种值得领扬的东西。如果说乐观有多么重要，就在于许多工作的结果，都取决于过程中我们抱持多少的乐观。乐观是成功的一项重要元素。这点完全违反了精英分子认为才智是美好人生主要条件的观点。在许多情况下，成功与失败其实都只取决于我们认为自己有多大的能力，以及我们能够鼓起多少勇气说服别人肯定我们的价值。我们如果失败，原因可能不是欠缺技术，而是缺少希望。当今的问题很少是因为人对事物采取过度乐观的观点。正由于我们总是摆脱不了世间的烦忧，才需要工具协助保持我们的乐观性情。</p>
+</blockquote>
+<blockquote>
+<p>缺乏艺术教育的人，通常认为艺术应该呈现“赏心悦目的事物”，文化精英对此却深觉紧张。美丽的事物遭到怀疑已经有好一段时间了</p>
+</blockquote>
+<blockquote>
+<p>这个世界如果不是这么严酷，我们对赏心悦目的艺术作品可能就不会有那么强烈的感受，也不会有那么大的需求。在欣赏艺术的体验当中，最古怪的一项特征就是艺术作品具有偶尔能够令我们感动落泪的能力。这种作品呈现出来的不是恐怖骇人的影像，而是优雅唯美的画面，它却可能在一时之间令人感到心碎。在这种对于美产生激烈反应的特殊时刻，我们究竟是怎么了？</p>
+</blockquote>
+<blockquote>
+<p>我们的人生愈艰苦，一幅花卉的优美画作愈有可能令我们为之感动。我们如果因此落泪，并不是因为那幅画有多么悲伤，而是因为那幅画有多么美</p>
+</blockquote>
+<blockquote>
+<p>实际上，这种作品之所以能够令我们有所感动，正是因为我们明白现实通常是什么模样。]赏心悦目的艺术作品所带来的享受乃是出自我们的不满：我们如果不觉得人生艰苦，美的事物对我们就不会有这么大的吸引力。</p>
+</blockquote>
+<blockquote>
+<p>不过，我们并不需要为这点感到忧心：至少在接下来的几百年里.世间绝对有足够的问题能够确保我们不会对赏心悦目的画作丧失兴趣。</p>
+</blockquote>
+<blockquote>
+<p>不过，理想化在历史上为何有很长一段时间被视为艺术的中心抱负，仍是个值得探究的问题。画家若是将事物呈现得比实际上更美好，通常不是因为他们对不完美的方面视而不见。</p>
+</blockquote>
+<blockquote>
+<p>我们应该要能够欣赏一幅理想化的影像，而不至于将其视为以虛假的方式呈现真实的事物。不尽写实的美丽想象对于我们而言应当更加珍贵，原因是我们都深知自己的渴望在人生中获得满足的机会有多么稀少。</p>
+</blockquote>
+<blockquote>
+<p>我们应该要能够欣赏一幅理想化的影像，而不至于将其视为以虚假的方式呈现真实的事物。不尽写实的美丽想象对手我们而言应当更加珍贵，原因是我们都深知自己的渴望在人生中获得满足的机会有多么稀少。</p>
+</blockquote>
+<blockquote>
+<p>理想化的反面-讽刺画——正可让我们得知理想化的图像对我们具有什么样的重要性。</p>
+</blockquote>
+<h3 id="哀愁"><a href="#哀愁" class="headerlink" title="哀愁"></a>哀愁</h3><blockquote>
+<p>许多令人悲份的事物，都因为我们认为自己独自辰担了这样的苦难而更令人难受。我们认为自己的烦忧是一种诅咒，或是揭露了我们邪恶卑鄙的本性。如此一来，我们的苦难就毫无尊严可言，而是我们恶劣的本质所应受的惩罚。我们需要帮助，才能在自己最糟的经验里找到光荣，而艺术正能够为这些经验赋子社会性的表达。</p>
+</blockquote>
+<blockquote>
+<p>艺术可以提供一个宏大而严肃的观点，让我们检视自身还境当中的辛苦艰难。这点在浪漫主义式的壮爾作品中尤其如此，也就是那些描绘星辰、海洋、宏伟的山脉或大陆裂谷的艺术作品。这些作品让我们认识到自己的微不足道，激起一股令人愉快的惊恐，让我们理解到人类面临的灾难相较于永恒之道是多么琐碎渺小，从而使我们更能够平心接受每个人在人生中都不免遭遇的那些无法理解的悲剧。如此一来，日常生活中的恼怒与担忧就得到了抵消。与其坚持我们被低估的重要性而企图矫正我们遭到的羞辱，我们可以借着艺术作品的帮助而致力手理解进而欣赏我们实质上的微不足道。</p>
+</blockquote>
+<blockquote>
+<p>我婚姻中的紧张关系以及工作上的挫折不只是我的问题，而是宇宙结构中的一部分。</p>
+</blockquote>
+<blockquote>
+<p>这幅面没有直接提及我们的人际关系或是我们日常生活中的压力与烦恼。这件作品的功能是让我们进人种心理状态，使我们深切体认到时间与空间的广交无垠。这件作品阴郁但不悲伤，乎静但不绝望。</p>
+</blockquote>
+<h3 id="重获平衡"><a href="#重获平衡" class="headerlink" title="重获平衡"></a>重获平衡</h3><blockquote>
+<p>艺术可以让我们接触自己欠缺的性格，而且是已经失去的气质，然后借此为我们歪斜倾侧的内在自我恢复一定程度的平衡。</p>
+</blockquote>
+<blockquote>
+<p>一旦到了工作日，就几乎没有时间能够思考任何事情。不过，到了夜晚，我们偶尔能够回到芝加哥市郊一幢完全对称齐整的住宅。从大面的落地窗往外望向一株橡树以及逐渐暗沉的天色，我们总算有机会能够找回平日藏匿无踪的那个较为孤独而且爱好沉思的自我。工字钢梁构成的规律节奏，唤起了我们遭到压抑的平和心态。一席巨大的窗帘围绕着这个优雅的居住空问，其精致的褶皱肯定了温柔的价值。镶饰着石灰岩砖的露台所呈现出来的简朴美感，则是促使我们追求一种朴实而善良的幸福。艺术作品能够帮助我们寻回自己性格中遗失的部分。</p>
+</blockquote>
+<blockquote>
+<p>一件作品一旦能够为我们提供我们欠缺的优点，我们就称之为美丽；但我们从作品中感受到的情绪或动机若是令我们觉得备受威胁，或是压得我们喘不过气来，我们就会将这件作品斥为丑陋。艺术可让我们的内心恢复完整。</p>
+</blockquote>
+<blockquote>
+<p>他对古希腊的艺术家及剧作家极少注意风景的现象颇感好奇。席勒指出，从古希腊人的生活方式来看，这种现象其实相当合理。他们白天总是在户外度过，他们居住的地方都是邻近于海洋与高山的小城市。他说：“希腊人的内心没有丧失自然。”他接着推测，正因如此，“所以他们也就无意创造能够令他们重拾自然的作品”</p>
+</blockquote>
+<blockquote>
+<p>“自然逐渐从人类生活的直接体验中消失之后，于是开始以理念的形态出现于诗人的世界当中，”</p>
+</blockquote>
+<blockquote>
+<p>从我们喜爱的艺术作品，即可看出我们的社会有那些缺陷。</p>
+</blockquote>
+<blockquote>
+<p>我们该要懂得探究一群人究竞缺乏什么才会因此认为某一件物品美丽，进而理解他们的选择，即便我们自己无法对这些作品产生任何热忱。</p>
+</blockquote>
+<blockquote>
+<p>现代民主政治思想的一项关键假设，就是认为我们应该任由每个人过着自己选择的生活，而不必受到别人的唠叨，不必害怕道德批判，也不必遭到官方一时兴起的强制干涉。面对“你凭什么告诉我怎么生活”•的质疑，刺探别人道德修养的冲动也不免低头退缩。</p>
+</blockquote>
+<blockquote>
+<p>尽管如此，历史上许多最杰出的艺术作品都明品带着明确的道德任务：企图透过规劝与告诚的隐藏讯息激发更好的自我。</p>
+</blockquote>
+<blockquote>
+<p>艺术可以为我们节省时间，也能够擁救我们的人生，原因是艺术能够在适当时刻深切提醒我们追求平衡与良善，而我们绝不该以为自己早已不再需要这样的提醒。</p>
+</blockquote>
+<h3 id="自我认知"><a href="#自我认知" class="headerlink" title="自我认知"></a>自我认知</h3><blockquote>
+<p>我们对自己并非了如指掌。我们拥有直觉、疑虑预感、模糊的猜测与混杂的情绪，这一切都难以轻易界定。我们都有情绪，但是对于自己的情绪却又不是真正理解。不过，我们不时会发现有些艺术作品似乎掌握了某种我们体验过却从来不曾真正明确认知的感受</p>
+</blockquote>
+<blockquote>
+<p>我们已在即将了解的边缘，却又还没了解。这个时刻很重要，因为接下来的结果通常不如预期。于是，我们就此放弃自我省思的过程。由于我们对爱情、正义或成功没有得到什么结论，所以我们的心思就又游移到其他事物上。看着托姆布雷的画作，能够在一个至关紧要的念头上对我们有所帮助：“我内心那个经常思索重要问题却又总是不免陷人困惑的部分，没有获得足够的认可。我没有对那个部分投以充分的关注。不过，现在我看到了自己的这个部分反映在艺术的镜子里，所以可以更加重视它。〞</p>
+</blockquote>
+<blockquote>
+<p>然而，当我们对一件物品产生熟悉感，是因为我们察觉到这件物品所带有的价值观，比在我们脑海里清楚得多</p>
+</blockquote>
+<blockquote>
+<p>艺术能够促成自我认识，也是将这一成果传达给别人的绝佳方式。要让别人分享我们的体验，是一件极度困难的事情</p>
+</blockquote>
+<blockquote>
+<p>•艺术既然能够帮助我们了解自己，并且让我们向别人传达我们的性格，因此我们通常很在乎自己挑选了哪些艺术作品摆在自己身边。即便在预算有限的情况下，我们也还是会花许多时间烦恼室内装潢，思考我们该以哪些物品向世人传达我们的自我认同。</p>
+</blockquote>
+<blockquote>
+<p>我们若是热爱理莫施密特设计的盘子，也许不仅代表了我们希望自己的宾客能够认为我们拥有良好的品味，而且还有足够的金钱能够展现这种品味。我们对这些盘子的喜好背后带有一种感受：“这此瓷器正适合我，因为它们就像是我内心最深处的自我。我可以借着这么一个盘子让别人了解我的一个重要方面：让别人知道身为我是什公样的感觉”这么一句话也许显得有点夸大，但我们之所以会这么觉得，也许只是因为我们不熟悉这样的观点。我们并不善于从自己内在心理的角度重新看待美丽的事物。</p>
+</blockquote>
+<blockquote>
+<p>艺术品是一种媒介，让我们得以认识自己，也能够让别人更明白我们实际上是什么样的人</p>
+</blockquote>
+<h3 id="成长"><a href="#成长" class="headerlink" title="成长"></a>成长</h3><blockquote>
+<p>接触艺术对人很有帮助，原因是艺术能參针对在我们身上引发防卫性厌倦与恐惧的疏高性事物提供鲜明深刻的例子，并且允许我们在私底下侵慢学习如何以更细腻明智的方法解決这些事物。</p>
+</blockquote>
+<blockquote>
+<p>这类信息对某些人可能烦有帮助，但对于一个看到这火作品就不感兴趣或者满怀敌意的观众来说，却亳无帮助。艺术专家经常认定观众原本就已对面前的作品深感兴趣，只是有少数细节问题需要厘清而已</p>
+</blockquote>
+<blockquote>
+<p>克服防卫心态的第一步，同时也是至关紧要的一步，就是要对这种心态的真实性保持高度警觉：要充分理解对于事物怀有强烈的负面观感是多么正常的现象。第二步则是意识到某些最受尊崇的艺术品可能来自有着光怪陆离的思维方式的人们，而你要做的是让自己适应他们的思维方式。</p>
+</blockquote>
+<blockquote>
+<p>迈向化解防卫性反应的第三步，则是在艺术家与我们自己的心态当中找寻相似之处，不论这样的相似性乍看之下有多么薄弱。他们的作品也许看起来非常奇怪，但我们一旦经过充分的自我探究，还是有可能在他们的抱负里找到能够引起我们共吗的方面。</p>
+</blockquote>
+<blockquote>
+<p>我们需要的各种事物并不是在任何地方或者任何时代都明显可见。唯有在陌生的事物中找到能够引起自己共鸣的点，我们才有可能成长</p>
+</blockquote>
+<h3 id="欣赏"><a href="#欣赏" class="headerlink" title="欣赏"></a>欣赏</h3><blockquote>
+<p>我们的一大缺陷，同时也是导致我们不快乐的一大原因，就是我们很容易忽略一直存在于周围的事物。我们之所以痛苦，原因是我们经常意识不到自己面前的事物所具有的价值，而总是渴望着自己想象中存在于其他地方的美好事物。</p>
+</blockquote>
+<blockquote>
+<p>在艺术的带领下，对于何谓珍贵的事物，我们能够重新找回较为精确的评估能力，原因是艺术能够背叛我们的习惯，邀请我们重新评估自己仰慕或喜爱的目标</p>
+</blockquote>
+<blockquote>
+<p>我们之所以对这些事物视而不见，原因是我们认定自己早已对这些东西熟悉到不能再熟悉的地步但艺术却借着凸显出我们可能忽略的一切，而傲然推翻我们的这种偏见。</p>
+</blockquote>
+<blockquote>
+<p>如果说我们心灵中的疾病有一大部分都可归咎于图像，那么图像偶尔也具有为我们提供解药的功劳。艺术能够让我们对人生境况中明显可见的单调三味感到厌悉，但同时也能够促使我们发挥智慧，与这样的境况和谐共存</p>
+</blockquote>
+<blockquote>
+<p>艺术能够向平凡人生中难以提摸的真实价值致敬。艺术能够教导我们以更加公正的态度看待自己，让我们知道自己在既有的处境中已经尽了全力认真生活，从事着自己不一定热爱的工作，面对着中年的种种问题，解决着雄心壮志未能实现的挫折感，努力对我们心爱但烦躁易怒的配偶保持忠诚。相较于媒体以光鲜亮丽的方式呈现一般人难以企及的事物，艺术的效果恰恰相反；艺术能够让我们重新看见自己被迫接受的人生当中所存在的实际优点。</p>
+</blockquote>
+<h3 id="好的艺术作品"><a href="#好的艺术作品" class="headerlink" title="好的艺术作品"></a>好的艺术作品</h3><blockquote>
+<p>每个人都有过类似的经验：一件作品虽然拥有崇高的名声，却感动不了我们的心灵。之所以会如此，原因是那份经典清单在许多方向都与我们的内在需求严重脱节。其中虽然可能有些切合我们需求的作品，但这种脱节的情形其实不太令人意外，原因是那份列表所选取的著名作品与艺术家，用意并不在于针对我们人生中的问题提供帮助。</p>
+</blockquote>
+<h4 id="政治观点"><a href="#政治观点" class="headerlink" title="政治观点"></a>政治观点</h4><blockquote>
+<p>根据政治观点的解读方法，杰出的艺术作品必须对人在尊严、真理、正义以及金钱报酬的适当分配等方面所从事的追寻，提出重要论点。</p>
+</blockquote>
+<h4 id="疗愈观点"><a href="#疗愈观点" class="headerlink" title="疗愈观点"></a>疗愈观点</h4><blockquote>
+<p>只要对我们具有疗愈效果，就可以算是重要的艺术作品。一件作品究竟算是“杰出”或“抽劣”，可以取决于这件作品对我们的内在需求有多大的帮助，有多么能够弥补先前提到的那七种心理缺陷包括贫弱的记忆力乃至对于小细节的容易忽略。</p>
+</blockquote>
+<h3 id="如何展示"><a href="#如何展示" class="headerlink" title="如何展示"></a>如何展示</h3><blockquote>
+<p>现代的美术馆看起来虽然条理井然，却掩藏了一种深刻而且非常严重的混乱，亦即对于艺术的真正目的缺乏清楚的认知。遵循学术性分类的做法，实际上会阻碍情感秩序及洞察力的创造与维系。</p>
+</blockquote>
+<blockquote>
+<p>这座美术馆采取了各种正确的淮备步骤：创造明亮的空间，并且将地位崇高的作品聚集于一处。然而，它却在这里倏然止步，没有继续鼓励我们在艺术的引导下改变我们的人生。</p>
+</blockquote>
+<blockquote>
+<p>美术馆的重点不该是教导我们如何热爱艺术，而是启发我们借着欣赏艺术作品而爱上艺术家所钟爱的事物：此差异虽然微小，但至关紧要。</p>
+</blockquote>
+<h2 id="爱"><a href="#爱" class="headerlink" title="爱"></a>爱</h2><blockquote>
+<p>我们如果认同引导人类情感是创造文明社会的一项重要元素，就应该承认文化-连同政治——是达成这种效果的核心机制之一。我们聆听的音乐、观看的电影居住的建筑与挂在墙上的绘画、雕刻和照片，正是我们细腻的引导者和教育者。</p>
+</blockquote>
+<blockquote>
+<p>艺术的其中一项宗旨就是教导我们成为善于爱的人：懂得热爱河流、热爱天空、热爱马路、热爱石头。还有非常重要的一点，就是在这样的学习过程中成为懂得热爱别人的人。</p>
+</blockquote>
+<h3 id="成为出色的爱人"><a href="#成为出色的爱人" class="headerlink" title="成为出色的爱人"></a>成为出色的爱人</h3><blockquote>
+<p>这种做法之所以会引起负面的联想，原因是我们生活在一个崇尚浪漫的时代，把真诚的爱与自发性的行为画上等号：我们对自己在爱情当中的所作所为愈缺少意识、愈欠缺训练，我们身为爱人的评价就愈高，也愈值得信赖</p>
+</blockquote>
+<blockquote>
+<p>懂得如何爱一个人与仰慕对方是两回事。仰慕不需要付出太多努力，只需要有活跃的想象力即可。问题总是在我们打算建立共同的生活之后才会出现。这样的生活可能包括家庭、子女以及经营事业与管理家务，而与我们共事的伴侣则是一个我们原本从一段距离外感到欣赏的对象。一旦建立起了这样的生活之后，我们才需要仰赖那些极少会自然出现而且通常能够获益于一些练习的特质：认真聆听别人说话的能力，还有耐心、好奇心、毅力、感官享受与理性。</p>
+</blockquote>
+<h3 id="注重细节"><a href="#注重细节" class="headerlink" title="注重细节"></a>注重细节</h3><blockquote>
+<p>我们经常说一件艺术作品是“投注满腔的爱”所造就的成果。</p>
+</blockquote>
+<h3 id="耐心"><a href="#耐心" class="headerlink" title="耐心"></a>耐心</h3><blockquote>
+<p>耐心不是一种激动的反应。实际上，耐心是一种不需要兴奋刺激、不需要立即的满足，而能够在看似无聊或乏味的事物当中坚持下去的能力。</p>
+</blockquote>
+<h3 id="理性"><a href="#理性" class="headerlink" title="理性"></a>理性</h3><blockquote>
+<p>这幢建筑热爱秩序、明晰与平衡，也希望我们热爱这些特质</p>
+</blockquote>
+<h2 id="自然"><a href="#自然" class="headerlink" title="自然"></a>自然</h2><h3 id="铭记在心的自然"><a href="#铭记在心的自然" class="headerlink" title="铭记在心的自然"></a>铭记在心的自然</h3><blockquote>
+<p>艺术是优秀的观察所留下来的纪录，并且鼓励我们模仿其精神，就算只有极少数人因此致力于复制艺术的产品也没有关系</p>
+</blockquote>
+<blockquote>
+<p>我们可以感受到绿草如茵的山丘在我们面前隆起，也能够鲜明体验到画中平静安详的氛围。他喜欢沙土步道两侧的岩石以及繁茂的草木，所以这些特色受到了强调。同时，也要注意他省略的东西：这幅画里没有焦点准确的事物，没有精准的树叶形状步道上也没有小石头。柯罗通过这幅画告诉我们的是，令他感到着迷的是这个地方的整体氛围与特性，而他也希望这点能够令我们感到欣喜。换句话说，如同任何一位杰出的风景画家，柯罗也试图界定一从而协助我们了解自然的某个方面为什么会深深吸引他。</p>
+</blockquote>
+<blockquote>
+<p>我们所谓风景画家的风格，指的就是他们聚焦于自然的某些方面。欣赏艺术的目标不是要教导我们对自然景色产生与某一个画家一样的反应，而是要让我们受到画家的创作方法所启发，也就是说我们应该厘清自己特别喜欢自然的哪个部分，然后认真看待我们在那一部分的经验，并且仔细筛选我们着迷的对象。如此一来，自然在我们的想象中即可成为一股更长久而且具有疗愈性的力量。</p>
+</blockquote>
+<h2 id="金钱"><a href="#金钱" class="headerlink" title="金钱"></a>金钱</h2><h3 id="品味的问题"><a href="#品味的问题" class="headerlink" title="品味的问题"></a>品味的问题</h3><blockquote>
+<p>生产者只致力于提供消费者愿意付费购买的东西。就这点而言，资本主义的优劣程度其实取决于消费者的品味。与其遣责企业的邪恶，我们自己也应该背负部分的批评。资本主义的许多问题其实都可以归结为消费者选择或品味的缺陷。</p>
+</blockquote>
+<blockquote>
+<p>劣质食品的销售量那么大，或是有那么多人想要住在那种无聊的度假村里，并不是那些企业经营者的错。许多电视节目的内容虽然都空洞愚蠢，但这些节目的制作人也不是一心想要制作这种质量低劣的娱乐。他们其实是为我们服务，只要能够赚钱，就愿意提供我们想要的任何东西。问题是，有太多人都热切追求错误的事物，也乐于为这些事物买单。</p>
+</blockquote>
+<blockquote>
+<p>金钱一旦与品味结合一—所谓的品味，就是能够敏镜意识到什么样的事物合乎美与善，又真正迎合我们难以言传的需求即有可能带来绝佳的结果，不论是在饮食、居住还是媒体等领域都是如此。问题在于，明智的花费极为罕见。这样的问题不是出在金钱体系本身，而是在于消费者的品味。</p>
+</blockquote>
+<blockquote>
+<p>除了代步的车辆，我们也应该对自己消费的其他各种对象提出同样的要求，不论是食品、媒体、建筑还是休闲方面的商品或服务。我们在人生中的各个面向都应该认同这种品味提升做法的正当性。要达到这个目标，我们应当全心接纳存在手艺术史上各个关键时刻的这号人物：批评家。</p>
+</blockquote>
+<blockquote>
+<p>我们总是以具备自己独特的品味为傲，但实际上，由于我们忙碌的生活以及心理结构的缺陷，因此除非我们能够受到鼓动而深人探究自己的内心，并且听取别人的意见将我们的热情导向有益的方向，否则我们很有可能根本不知道自己喜欢什么。</p>
+</blockquote>
+<blockquote>
+<p>每个人都可能喜欢或不喜欢特定作品，最杰出的批评家能够协助我们针对这种情形找出足以引起个人共鸣的原因。他们认真看待个人体验当中一项非常古怪的现象：也就是我们并不会自然而然地知道自己为什么喜欢或厌恶某些事物。我们通常无法向自己或别人精确说明我们喜欢或不喜欢一件事物的重点究竟在哪里。</p>
+</blockquote>
+<blockquote>
+<p>批评就是到幕后找出真正原因的活动。</p>
+</blockquote>
+<h3 id="职业忠告"><a href="#职业忠告" class="headerlink" title="职业忠告"></a>职业忠告</h3><blockquote>
+<p>随着经济发展，许多受过高等教育而且志存高远的工作人口，也因此产生了一种令人优虑的野心。对他们而言，单是从工作中赚取得以糊口的薪资已经不再足够理想上，工作也应该富有意义。在工作中寻求意义的冲动有可能极为强烈，从而导致我们在职业生涯中做出偏离常轨的决定，造成剧烈而且看似莽撞的变动：我们可能因此拋下高薪又稳定的职业，转而从事其他工作，以便满足我们称之为“有意义”的某种内心需求。</p>
+</blockquote>
+<blockquote>
+<p>一份工作要有意义，似乎必须具备两种元素。首先，我们希望自己的工作能够让我们觉得自己多多少少有助于改善这个世界，不论是减少苦难，还是促成喜悦、理解或慰藉。第二项元素更具挑战性，亦即有意义的工作应该与个人最核心的天赋与兴趣方向一致。这样一份工作必须让我们有机会把自己内在的品质表现于外，如此一来我们才能够回顾自己的工作成果，而认为这些成果向别人以及我们自己传达了我们最诚挚、真实而且有价值的特质。难怪我们有可能花费许多年的时间。一尤其是在我们职业生涯的初期-纳闷自己究竟该拿自己的人生做些什么。</p>
+</blockquote>
+<blockquote>
+<p>职业生涯的问题通常始于一种不寻常的感受：我竹对于自己不愿意做的许多事情都了如指掌，但是对于自己该朝什么方向追求内心的抱负，却通常只有一些模糊不清的渴望。我们想要改变现状，想要做些有趣而且有价值的事情，却无法清楚看出自己的兴趣何在。于是，我们通常会因此感到恐慌，而把自己的不幸怪罪在别人头上，宣称环境对我们不公平，并且夸大自己的缺陷。</p>
+</blockquote>
+<blockquote>
+<p>在这种情况下，明智的做法应该是发挥一点耐心认识到对于自己的人生方向茫然失措其实是追寻志业的过程中不可避免的一部分。迷失的感受不是前途黯淡的证据，而是我们的追寻在获取丰硕成果之前必经的阶段。在这段过程中，有两种征象尤其应该受到我们的注意：嫉妒与仰慕</p>
+</blockquote>
+<blockquote>
+<p>我们也许会说得族如是一种益耻的感说，证明了自己的失败，但我们其实应,该针对自己嫉护的所有对象提出这个能够令我们获得救赎的必要问题：我能够从对方身上学到什么？可叹的是，嫉妒的感受通常令人迷惑不解且极为模糊。我们嫉妒的人物与情境多不胜数，但只要静下心来仔细分析我们嫉妒的对象，就会发现其中只有-小部分真正涉及我们内心的抱负。我们如果能够好好探究自己的嫉妒感受，而不是加以否认或者任由自己因此陷人绝望，即可从嫉妒的恶毒深渊中找出许多重要的线索，让我们了解自己该如何成为真正的自我。</p>
+</blockquote>
+<blockquote>
+<p>除了对嫉妒缺少正确的认识，我们仰慕别人的方式也可能有碍我们模仿对方。我们可能对自己的偶像抱有过高的尊敬，以致看不出自己其实能够“窃取”他们身上的特质。我们应该以健康的态度面对自己的偶像，也就是意识到自己只要怀着崇敬之心充分学习对方，就有可能在未来超越他们，而不是一辈子都只能对他们怀着缺少创意的敬意。仰慕与嫉妒虽是世人共有的体验，但在艺术家的创作生涯中呈现出来的效果，却更能够让我们清楚检视这两种心态的内部运作方式。我们可以在艺术家的传记中观察到这一点：善于以建设性的方式运用仰慕与嫉妒的能力，其实与成功有着异常紧密的关系。</p>
+</blockquote>
+<h2 id="政治"><a href="#政治" class="headerlink" title="政治"></a>政治</h2><h3 id="改变世界吧"><a href="#改变世界吧" class="headerlink" title="改变世界吧"></a>改变世界吧</h3><blockquote>
+<p>艺术的真正志向应该是降低世人对艺术的需求。并不是说我们有一天应该对艺术探讨的对象-包括美深刻的意义、良好的感情关系、对于自然的欣赏、对手人生短暂的体认、同理心、慈悲心等失去热爱，而是说我们一旦吸收了艺术表现的理想之后，便应该致力在真实世界实现艺术仅能象征的事物：毕竟，不论是多么优雅热切的艺术作品，终究也只是一种象征。艺术爱好者追求的终极目标，应该是打造一个艺术作品不再那么具有必要性的世界。</p>
+</blockquote>
+<blockquote>
+<p>相较之下，我们的时代则是信奉原创性。这种假定有时候颇为危险，因为纯粹的新奇就有可能因此被误认为是杰出的艺术表现。许多优秀的艺术家都精通于创作艺术品，却不太善于设定艺术品的目的。本书的主张是我们应当重新定义艺术任务的概念。我们定义的艺术任务将不是为了达到任何超自然目的，而是完全聚焦于人类的需求。</p>
+</blockquote>
+
+  </div>
+  <div id="gitalk-container"></div>
+</div>
+
+<script>
+  
+Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
+  dragToClose: true,
+  Toolbar: true,
+  closeButton: "top",
+  Image: {
+    zoom: true,
+  },
+  on: {
+    initCarousel: (fancybox) => {
+      const slide = fancybox.Carousel.slides[fancybox.Carousel.page];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+    "Carousel.change": (fancybox, carousel, to, from) => {
+      const slide = carousel.slides[to];
+      fancybox.$container.style.setProperty(
+        "--bg-image",
+        `url("${slide.$thumb.src}")`
+      );
+    },
+  },
+});
+</script>
+
+<style>
+    #noneimg img {
+        display: none;
+        z-index: 9999;
+        /* width: 600px !important; */
+        min-width: 0%;
+        max-width: 90%;
+        max-height: 80%;
+        border-radius: 0px;
+        position: fixed;
+        box-shadow: 0 0 0px #c3c3c300 !important;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto !important;
+    }
+
+    @media screen and (max-width:600px) {
+        #noneimg img {
+            max-width: 88%
+        }
+    }
+</style>
+
+    <div class="post-paging">
+    
+    <a href="/2022/CG/Comp/AE_Diffi/">
+        <div class="post-paging-last">
+            <span>上一篇</span>
+            <p>使用Diffuse(filter info)通道在后期校准颜色</p>
+        </div>
+    </a>
+    
+
+    
+    <a href="/2022/CG/Render/OC_Crack/">
+        <div class="post-paging-next">
+            <span>下一篇</span>
+            <p>关于OC崩溃、显存优化的相关记录</p>
+        </div>
+    </a>
+    
+</div>
+</div>
+		
+<div class="footer">
+	<div class="Copyright">
+		©2025 By 可能是水桶吧 <br>备案信息：<a
+			style="text-decoration: none;display: contents; color: #90defd;"
+			target="_blank" rel="noopener" href="http://beian.miit.gov.cn">ICP-123456</a>
+	</div>
+	<div class="contact">
+		
+		<a target="_blank" rel="noopener" href="https://visnz.zcool.com.cn/">
+			<img src="/assets/website/zcool-icon2.png" alt="Quiet主题">
+		</a>
+		
+		<a target="_blank" rel="noopener" href="https://www.xiaohongshu.com/user/profile/599e99f650c4b40fb927384f">
+			<img src="/assets/website/xhs-icon.png" alt="Quiet主题">
+		</a>
+		
+		<a target="_blank" rel="noopener" href="https://space.bilibili.com/20477830">
+			<img src="/assets/website/bilibili-icon.png" alt="Quiet主题">
+		</a>
+		
+		<a href="/assets/blog/about/QQ_QRCode.jpg">
+			<img src="/assets/website/QQ-icon.png" alt="Quiet主题">
+		</a>
+		
+	</div>
+	</div>
+</div>
+
+<script src="/js/gotop.js"></script>
+
+
+<style type="text/css">
+    @media screen and (min-width: 600px) {
+        .goTop>span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            opacity: 0.8;
+            background: rgba(18, 24, 58, 0.06);
+            text-align: center;
+            transition: border .5s;
+            border: 1px solid rgba(18, 24, 58, 0.06);
+
+            -moz-transition: border .5s;
+            /* Firefox 4 */
+            -webkit-transition: border .5s;
+            /* Safari 和 Chrome */
+            -o-transition: border .5s;
+            /* Opera */
+        }
+
+        .goTop>span:hover {
+            border: 1px solid #6680B3;
+        }
+
+
+        .goTop {
+            position: fixed;
+            right: 30px;
+            bottom: 80px;
+        }
+
+        .goTop>span>svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+        }
+
+    }
+
+    @media screen and (max-width: 600px) {
+        .goTop {
+            display: none;
+        }
+    }
+</style>
+<div class="goTop" id="js-go_top">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g>
+                <path d="M13 12v8h-2v-8H4l8-8 8 8z"></path>
+            </g>
+        </svg>
+    </span>
+</div>
+<script>
+    $( '#js-go_top' )
+	.gotoTop( {
+		offset: 500,
+		speed: 300,
+		animationShow: {
+			'transform': 'translate(0,0)',
+			'transition': 'transform .5s ease-in-out'
+		},
+		animationHide: {
+			'transform': 'translate(100px,0)',
+			'transition': 'transform .5s ease-in-out'
+		}
+	} );
+</script>
+	</body>
+</html>
+

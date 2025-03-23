@@ -9,9 +9,7 @@ tags:
     - AfterEffects
     - OctaneRender
     - 多通道
-describe: ''
-categories: "CG通用相关"
-comments: false
+categories: "后期合成"
 ---
 
 1. 颜色有亮度，调整亮度会影响到饱和度、调整饱和度会影响到亮度。

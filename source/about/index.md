@@ -53,11 +53,15 @@ layout: "about"
     <a class="C1">OctaneRender</a>
     <a class="C1">AfterEffects</a>
     <a class="C1">Blender</a>
+    <a class="C1">EEVEE</a>
+    <a class="C1">NPR</a>
     <a class="C1">MarvelousDesigner</a>
     <a class="C1">SubstancePainter</a>
     <a class="C1">MotionGraphic</a>
     <a class="C1">Lighting</a>
     <a class="C1">Compositing</a>
+    <a class="C1">风格化渲染</a>
+    <a class="C1">TA</a>
     <a class="C2">蔚蓝档案</a>
     <a class="C2">重返未来1999</a>
     <a class="C2">原神</a>
