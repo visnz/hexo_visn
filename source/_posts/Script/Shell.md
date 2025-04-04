@@ -6,6 +6,7 @@ aubot_link: '/index.html'
 cover: '/assets/blog/script/shell0.png'
 tags: 
     - 脚本
+    - 快速文档
     - 累进式笔记
 categories: "脚本相关"
 ---

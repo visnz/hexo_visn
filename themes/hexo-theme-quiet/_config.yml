@@ -1,3 +1,4 @@
+# ignore_drafts: true
 # 网站标题
 title: 水桶的小屋
 # 网站标题后缀
@@ -15,7 +16,7 @@ home_layout: card
 # 导航名称
 menus_title:
   home: 封面
-  fav: 精选
+  fav: 快速文档
   categories: 分栏
   tags: 标记
   archive: 时间线
@@ -24,7 +25,7 @@ menus_title:
 # 导航 （不建议修改）
 menus:
   home: /
-  fav: /tags/累进式笔记
+  fav: /tags/快速文档
   categories: /categories
   tags: /tags
   archive: /archives

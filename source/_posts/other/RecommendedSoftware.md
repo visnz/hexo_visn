@@ -6,6 +6,7 @@ aubot_link: '/index.html'
 cover: '/assets/blog/other/RecommendedSoftware.png'
 tags: 
     - 累进式笔记
+    - 快速文档
 describe: ''
 categories: "工具与其他"
 ---

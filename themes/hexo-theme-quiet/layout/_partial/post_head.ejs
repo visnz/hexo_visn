@@ -31,9 +31,11 @@
                 <% } %>
                 <span class="post-header-info-author-text"> <a href="<%- page.aubot_link ? page.aubot_link : '../../about' %>"><%- page.aubot ? page.aubot : theme.author %></a></span>
                 <div class="post-header-info-author-categories">
-                    <% page.categories.data.map((cat)=>{ %>
-                         <a href="/<%- cat.path %>" target="_blank" ><%- cat.name %></a>
-                    <% }) %>
+                    <% if (page.categories && page.categories.data) { %>
+                        <% page.categories.data.map((cat)=>{ %>
+                            <a href="/<%- cat.path %>" target="_blank" ><%- cat.name %></a>
+                        <% }) %>
+                    <% } %>
                 </div>
                 <p><%- date(page.date, "YYYY-MM-DD HH:mm:ss") %></p>
             </div>
