@@ -1,6 +1,6 @@
 # ignore_drafts: true
 # 网站标题
-title: 水桶的小屋
+title: 水桶点心
 # 网站标题后缀
 suffix: .Backup
 # 作者名称
@@ -109,6 +109,12 @@ bottomIcon:
 # 友情链接
 linksList:
   - {
+    title: 'gt4404gb',
+    intro: '朋友链接',
+    link: 'https://gt4404gb.com/',
+    image: '/assets/website/gt4404gb.png'
+  }
+  - {
     title: 'Blender插件：快照',
     intro: '含文件快访/小工具箱',
     link: 'https://github.com/visnz/Snapshot_3d_viewer',
@@ -126,7 +132,6 @@ linksList:
     link: 'https://github.com/visnz/screenshot-sh',
     image: '/assets/website/python.png'
   }
-
 #默认的cover (默认缩略图) 在没有填写（这里可以替换（可以是api也可以是固定的图））
 # https://api.ixiaowai.cn/gqapi/gqapi.php
 # https://tuapi.eees.cc/api.php?type=302&category=fengjing
