@@ -1,12 +1,14 @@
-
 <% if(is_archive()){ %>
-    <% page.title = __('文章归档') %>
+    <% page.title = __('时间线') %>
     <%- partial('_partial/header',{name:'archive'}) %>
     <%
         var years = {};
         var PageNum = 0;
         var PageYear = 0;
         site.posts.sort('date').reverse().forEach(function(post){
+            // 跳过 gallery 文章
+            if(post.gallery) return;
+            
             var year = post.date.year()
             if(years[year]===undefined){
                 years[year] = [];
@@ -22,6 +24,9 @@
     <%
         var years = {};
         site.posts.sort('date').reverse().forEach(function(post){
+            // 跳过 gallery 文章
+            if(post.gallery) return;
+            
             const categorys = post.categories;
             if(categorys.length < 1) return
             categorys.data.map((cat)=>{
@@ -50,6 +55,3 @@
         </div>
     </div>    
 </div>
-
-
-

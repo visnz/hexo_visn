@@ -1,0 +1,30 @@
+<%- partial('_partial/header', {name: 'gallery'}) %>
+
+<div class="gallery">
+    <%- partial('_widget/header_body', {
+        message: theme.headers.gallery.message, 
+        icon: theme.headers.gallery.icon
+    }) %>
+    
+    <div class="main">
+        <div class="post-card"> 
+            <% site.posts.filter(post => post.gallery).sort('date', -1).each(function(post){ %>
+                <div class="post-card-display">
+                    <a href="<%- url_for(post.path) %>">
+                        <% if(post.cover) { %>
+                            <img src="<%- url_for(post.cover) %>" alt="<%- post.title %>">
+                        <% } %>
+                        <div class="post-card-title"><%= post.title %></div>
+                        <!-- <div class="post-card-meat">
+                            <div class="meat-info">
+                                <div class="info-data">
+                                    <time><%- date(post.date, theme.date_format) %></time>
+                                </div>
+                            </div>
+                        </div> -->
+                    </a>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</div>

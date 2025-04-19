@@ -16,7 +16,7 @@ home_layout: card
 # 导航名称
 menus_title:
   home: 封面
-  fav: 快速文档
+  fav: 作品集
   categories: 分栏
   tags: 标记
   archive: 时间线
@@ -25,13 +25,19 @@ menus_title:
 # 导航 （不建议修改）
 menus:
   home: /
-  fav: /tags/快速文档
+  fav: /gallery
   categories: /categories
   tags: /tags
   archive: /archives
   links: /links
   about: /about
-  
+
+# Gallery 页面配置
+gallery:
+  enable: true
+  message: 作品集
+  icon: /assets/blog/about/d.webp.jpg
+
 # logo
 logo: /assets/blog/about/d.webp.jpg
 # 网页标签上那个小图标 一定要用本地存储
@@ -40,6 +46,10 @@ icon: /assets/blog/about/d.webp.jpg
 headers:
     home: {
       message: "时间以同样的方式流经每个人",
+      icon: "/assets/blog/about/d.webp.jpg"
+    }
+    gallery: {
+      message: "以回望的方式看日子",
       icon: "/assets/blog/about/d.webp.jpg"
     }
     archives: {
@@ -63,13 +73,6 @@ headers:
 # web_analytics:  
 #   enable: false #需要改为true
 #   baidu: 4b5fe1472f22fadsfs  # （替换）百度统计的 Key，参见 https://tongji.baidu.com/sc-web/10000033910/home/site/getjs?siteId=13751376 代码获取中 hm.js? 后边的字符串
-# 评论 
-# gitalk:
-#   clientID: 02b3c # （需要替换）GitHub Application Client ID.
-#   clientSecret: adfc7b4 #（需要替换）GitHub Application Client Secret.
-#   repo: gimment #（需要替换）GitHub repository.
-#   owner: duneng #（需要替换）GitHub repository 所有者，可以是个人或者组织。
-#   admin: ['duneng'] #（需要替换）GitHub repository 的所有者和合作者 (对这个 repository 有写权限的用户)。
 
 # 底部显示的图标（github 或者其他）
 bottomIcon: 
@@ -80,7 +83,15 @@ bottomIcon:
     #图标    
     iconLink: '/assets/website/zcool-icon2.png',
     #跳转链接    
-    toUrl: 'https://visnz.zcool.com.cn/'
+    toUrl: 'https://zcool.com.cn/u/16912324'
+  }
+  - {
+    #描述名称
+    name: 'Youown',
+    #图标    
+    iconLink: '/assets/website/youown.png',
+    #跳转链接    
+    toUrl: 'https://youown.net/mycenter/b4433f29d0f7458a91e9363af94bdc9e'
   }
   - {
     #描述名称

@@ -7,7 +7,7 @@
 
 <%
     let years = {};
-    page.posts.each(function (post) {
+    page.posts.filter(post => !post.gallery).each(function (post) {
         if(date(post.date, "YYYY") != date_cursor) {
             date_cursor = date(post.date, "YYYY")
             if(years[date_cursor] === undefined){

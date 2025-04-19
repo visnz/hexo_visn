@@ -1,3 +1,4 @@
+@import "../variables"; 
 .post{
     #post-toc{
         .post-toc-title{
@@ -248,8 +249,19 @@
             }
         }
     }
+    .links-content-data{
+        &-item{
+            padding: 10px 20px;
+        }
+        padding: 5px;
+        justify-content: flex-start;
+    }
 }
 
+iframe{
+    width: 100%;
+    height: 50vh;
+}
 
 
 @media screen and (max-width: 800px) {

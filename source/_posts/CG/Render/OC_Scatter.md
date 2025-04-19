@@ -20,7 +20,8 @@ categories: "渲染器相关"
 ## 解决（1阶段）
 通过顶点贴图+域排除掉非视野部分。这个方法仅适用于静帧，因为随着摄像机移动，顶点贴图会重新计算，草的位置会不断跳变。
 
-1. 在地形上创建顶点贴图![](/assets/blog/CG/Render/OC_Scatter1.webp)
+1. 在地形上创建顶点贴图
+![](/assets/blog/CG/Render/OC_Scatter1.webp)
 ![使用域控制，并删除冻结](/assets/blog/CG/Render/OC_Scatter2.webp)
 
 2. 使用法线排除某一个方向的，法线方向与摄像机方向相反，使用（effect-falloff）排除非摄像机角度的oc scatter分布
